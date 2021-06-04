@@ -2,6 +2,14 @@ import os
 import json
 import re
 
+'''
+Go through the data directory and parse run and event
+information from the file names and write out to json.
+
+Also determine how many files we have and how many are
+unique
+'''
+
 events = []
 
 gif_files = [fn for fn in os.listdir('./data') if fn.endswith('.gif')]
