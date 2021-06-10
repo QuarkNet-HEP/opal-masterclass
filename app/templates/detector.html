@@ -4,7 +4,116 @@
 </head>
 <body>
   <h1>{{ title }}</h1>
+
+  <p>
+    The OPAL experiment is approximately cylindrical in shape. 
+    The particles are produced on the axis of the cylinder at the centre and 
+    then travel outwards.
+    As they do so, the particles pass through several different types of 
+    detectors, which are arranged in concentric cylinders about the axis.
+    Different types of particle leave different signals in the various detectors
+    and this allows us to distinguish them.
+    You can find <a href="http://www.cern.ch/Opal/tour/detector.html" target="_blank"> 
+      a diagram of the experiment and a lot more details here. </a>
+  </p>
+
+  <p>
+    Let's have a look at an example picture of a particle interaction.
+    This shows the cylindrical detector viewed from one end.
+    Therefore the concentric cylinders corresponding to the different dectectors
+    show up as concentric circles.
+  </p>
+
+  <p>
+    The incoming beams of electrons and positrons travel in opposite directions
+    along the axis of the cylindrical detector.
+    (In this picture this corresponds to a line that is perpendicular to  
+    your computer screen and through the centre of the concentric circles.)
+  </p>
+
+  <p>
+    <h2>End-On View of Event</h2>
+    <img src="{{ url_for('static', filename='data/x7708_23918.gif') }}">
+  </p>
+
+  <p>
+    Travelling from the inside outwards, the first detector sees the 
+    tracks produced by electrically charged particles.
+    (A charged particle track is shown as the purple line in the picture.)
+    You may just be able to see that the track is very slightly curved.
+    This is because a magnetic field is applied.
+    (In the picture the direction of the magnetic field is 
+    perpendicular to the screen.)
+    By measuring very accurately the degree of curvature we can determine the 
+    momentum of each charged particle track.
+  </p>
+
+  <p>
+    Next on its outward journey the particle passes through a detector called
+    the "electromagnetic calorimeter".
+    As it interacts with the atoms in the detector the particle loses energy.
+    The detector measures the total amount of energy the particle deposits;
+    that is why it is called a calorimeter.
+    (In the picture the energy deposited is shown as the yellow rectangle.)
+  </p>
+  
+  <p>
+    In the picture a colour code is used to indicate the momentum of charged 
+    particle tracks and the energy deposited in the calorimeters.
+    A scale at the bottom of the picture shows which colour corresponds to which
+    range of energy/momentum.
+    Thus, red corresponds to energy/momentum of between 0 and 0.5 GeV, 
+    yellow to between 0.5 and 1.0 GeV, green to between 1.0 and 2.0 GeV,
+    and so on. 
+    Tracks and clusters drawn in white correspond to energy/momentum 
+    of greater than 16 GeV.
+    (You should be able to see that the charged track in the picture corresponds
+    to a momentum of between 4 and 8 GeV and that the cluster in the 
+    electromagnetic calorimeter corresponds to an energy of between  
+    0.5 and 1.0 GeV.)
+  </p>
+
+  <p>
+    Many particles lose all their energy in the electromagnetic calorimeter and
+    therefore progress no further.
+    However, the particle in the picture passes through the 
+    electromagnetic calorimeter and into the next detector, which is called
+    the "hadronic calorimeter".
+    The energy the particle deposits in the hadronic calorimeter is shown 
+    in the picture as the purple rectangle and crosses.
+  </p>
+
+  <p>
+    Almost all particles lose all of their remaining energy in the hadronic 
+    calorimeter and therefore progress no further.
+    However, the particle in the picture passes through the 
+    hadronic calorimeter and into the outermost detectors, which are called
+    the "muon chambers".
+    The signals  the particle produces in the muon chambers are shown as the 
+    yellow crosses and the red arrow.
+    A  muon is the only type of particle that is likely 
+    to pass through all the calorimeters and leave signals in the muon chambers.
+  </p>
+  
+  <p>
+    Sometimes it's useful to look at the detector and the particle signals 
+    from the side.
+    Here is a picture of the same "event" we have been looking at already, but
+    from side-on.
+  </p>
+
+  <p>
+    <h2>Side View of Event</h2>
+    <img src="{{ url_for('static', filename='data/s7708_23918.gif') }}" >
+  </p>
+
+  
 </body>
-<footer>  
-  <a href="{{ url_for('index') }}">Back to start</a>
+<footer>
+  <p>
+    <a href="{{ url_for('challenge1') }}">Next: Challenge (Part 1)</a>
+  </p>
+  <p>
+    <a href="{{ url_for('index') }}">Back to start</a>
+  </p>
 </footer>

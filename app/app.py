@@ -64,7 +64,7 @@ def create_app():
     def detector():
         return render_template(
             'detector.html',
-            title='Introduction',
+            title='The OPAL Detector',
         )
 
     app.add_url_rule('/detector', 'detector', detector)
