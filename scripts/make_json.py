@@ -6,6 +6,9 @@ import re
 Go through the data directory and parse run and event
 information etc. from the file names and write out to json.
 
+Also for each run_event combination write out the corresponding
+files available for it. 
+
 Also determine how many files we have and how many are
 unique.
 
@@ -14,7 +17,8 @@ unique.
 base_dir = os.path.abspath('../')
 data_dir = os.path.join(base_dir, 'app', 'static', 'data')
 
-events = []
+files = []
+events = {}
 
 gif_files = [fn for fn in os.listdir(data_dir) if fn.endswith('.gif')]
 
@@ -37,44 +41,50 @@ for gif in gif_files:
     
     run = int(re.sub(r"\D", "", run_event[0]))
     event = int(re.sub(r"\D", "", run_event[1]))
+
+    run_event = f'{run}_{event}'
+
+    if run_event in events:
+        events[run_event].append(gif)
+    else:
+        events[run_event] = [gif]
     
-    events.append({
+    files.append({
         'run': run,
         'event': event,
         'file_name': gif,
         'view': view,
+        'type': '',
     })
     
-json_file_name = 'data.json'
+files_file_name = 'files.json'
     
 json.dump(
+    files,
+    open(files_file_name, 'w'),
+    sort_keys=True,
+    indent=4
+)
+
+events_file_name = 'events.json'
+
+json.dump(
     events,
-    open(json_file_name, 'w'),
+    open(events_file_name, 'w'),
     sort_keys=True,
     indent=4
 )
 
 print(
-    f'Results written to {json_file_name}'
+    f'Results written to {files_file_name} and {events_file_name}'
 )
-    
-event_stats = {}
-
-for e in events:
-
-    run_event = str(e['run'])+'_'+str(e['event'])
-
-    if run_event in event_stats:
-        event_stats[run_event] += 1
-    else:
-        event_stats[run_event] = 1
 
 print(
-    len(events),
+    len(files),
     'event files'
 )
 
 print(
-    len(event_stats),
+    len(events),
     'unique events'
 )
