@@ -3,11 +3,10 @@
   <title>{{ title }}</title>
 </head>
 <body>
-  {% for event in events: %}
-    <a href="{{ url_for('static', filename='data/'+event.file_name) }}">
-      Event {{ event.event_id }}
-    </a>
-    <br>
-  {% endfor %}
+  <p>
+    <a href="{{ url_for('Z') }}">Z challenge</a>
+  </p>
+  <p>
+    <a href="{{ url_for('W') }}">W challenge</a>
+  </p>
 </body>
-
