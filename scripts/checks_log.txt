@@ -1,0 +1,21 @@
+Checking for missing files in Z-challenge.csv
+Checking for missing files in W-challenge.csv
+w8284_28382.gif,200 not found
+m8666_39729.gif,441 not found
+q8689_16789.gif,450 not found
+Checking for duplicate ids in Z-challenge.csv
+622: ['z5305_22587.gif', 'z5293_8046.gif']
+961: ['z5305_12699.gif', 'z5305_12866.gif']
+990: ['z5293_13623.gif', 'z5305_24287.gif']
+Checking for duplicate ids in W-challenge.csv
+24: ['t8664_4071end.gif', 't8664_4071side.gif']
+31: ['m8702_3780end.gif', 'm8702_3780side.gif']
+53: ['t8664_4859end.gif', 't8664_4859side.gif']
+99: ['t8664_4257end.gif', 't8664_4257side.gif']
+134: ['t8664_3092end.gif', 't8664_3092side.gif']
+145: ['t8664_3211end.gif', 't8664_3211side.gif']
+160: ['t8664_3350end.gif', 't8664_3350side.gif']
+171: ['t8664_3049end.gif', 't8664_3049side.gif']
+267: ['t8664_3210end.gif', 't8664_3210side.gif']
+289: ['t8664_3407end.gif', 't8664_3407side.gif']
+305: ['m8702_8738end.gif', 'm8702_8738side.gif']

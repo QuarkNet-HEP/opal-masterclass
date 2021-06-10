@@ -4,19 +4,36 @@ import re
 
 '''
 Go through the data directory and parse run and event
-information from the file names and write out to json.
+information etc. from the file names and write out to json.
 
 Also determine how many files we have and how many are
-unique
+unique.
+
 '''
+
+base_dir = os.path.abspath('../')
+data_dir = os.path.join(base_dir, 'app', 'static', 'data')
 
 events = []
 
-gif_files = [fn for fn in os.listdir('./data') if fn.endswith('.gif')]
+gif_files = [fn for fn in os.listdir(data_dir) if fn.endswith('.gif')]
 
 for gif in gif_files:
-
+    
     run_event = gif.split('.')[0].split('_')
+    
+    view = ''
+
+    if 'side' in gif:
+        view = 'side'
+    elif 'end' in gif:
+        view = 'end'
+    elif 's' in run_event[0]:
+        view = 'side'
+    elif 'x' in run_event[0]:
+        view = 'end'
+    else:
+        view = 'end'
     
     run = int(re.sub(r"\D", "", run_event[0]))
     event = int(re.sub(r"\D", "", run_event[1]))
@@ -24,10 +41,11 @@ for gif in gif_files:
     events.append({
         'run': run,
         'event': event,
-        'file_name': gif
+        'file_name': gif,
+        'view': view,
     })
     
-json_file_name = 'opal-gifs.json'
+json_file_name = 'data.json'
     
 json.dump(
     events,
