@@ -7,7 +7,10 @@ from flask import (
     render_template
 )
 
-data_dir = os.path.join('./', 'data')
+data_dir = os.path.join(
+    os.path.abspath('./'),
+    'data'
+)
 
 zevents = []
 wevents = []
