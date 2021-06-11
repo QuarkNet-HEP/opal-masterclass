@@ -1,5 +1,4 @@
 import csv
-import os
 import json
 
 from flask import (
@@ -7,61 +6,56 @@ from flask import (
     render_template
 )
 
-data_dir = os.path.join(
-    os.path.dirname(__file__),
-    'data'
-)
-
-zevents = []
-wevents = []
-
-with open(os.path.join(data_dir, 'Z-challenge.csv'), 'r') as zcsv:
-    csv_reader = csv.reader(zcsv)
-    next(csv_reader, None)
-
-    for fn, eid in csv_reader:
-        zevents.append(
-            {
-                'file_name': fn,
-                'event_id': eid
-            }
-        )
-
-with open(os.path.join(data_dir, 'W-challenge.csv'), 'r') as wcsv:
-    csv_reader = csv.reader(wcsv)
-    next(csv_reader, None)
-
-    for fn, eid in csv_reader:
-        wevents.append(
-            {
-                'file_name': fn,
-                'event_id': eid
-            }
-        )
-
-challenge1_events = json.load(
-    open(os.path.join(data_dir, 'challenge1.json'), 'r')
-)
-
-challenge2_events = json.load(
-    open(os.path.join(data_dir, 'challenge2.json'), 'r')
-)
-
-challenge3_events = json.load(
-    open(os.path.join(data_dir, 'challenge3.json'), 'r')
-)
-
-challenge4_events = json.load(
-    open(os.path.join(data_dir, 'challenge4.json'), 'r')
-)
-
-challenge5_events = json.load(
-    open(os.path.join(data_dir, 'challenge5.json'), 'r')
-)
-
 def create_app():
 
     app = Flask(__name__)
+
+    zevents = []
+    wevents = []
+
+    with app.open_resource('data/Z-challenge.csv', mode='rt') as zcsv:
+        csv_reader = csv.reader(zcsv)
+        next(csv_reader, None)
+
+        for fn, eid in csv_reader:
+            zevents.append(
+                {
+                    'file_name': fn,
+                    'event_id': eid
+                }
+            )
+
+    with app.open_resource('data/W-challenge.csv', mode='rt') as wcsv:
+        csv_reader = csv.reader(wcsv)
+        next(csv_reader, None)
+
+        for fn, eid in csv_reader:
+            wevents.append(
+                {
+                    'file_name': fn,
+                    'event_id': eid
+                }
+            )
+
+    challenge1_events = json.load(
+        app.open_resource('data/challenge1.json')
+    )
+
+    challenge2_events = json.load(
+        app.open_resource('data/challenge2.json')
+    )
+
+    challenge3_events = json.load(
+        app.open_resource('data/challenge3.json')
+    )
+
+    challenge4_events = json.load(
+        app.open_resource('data/challenge4.json')
+    )
+
+    challenge5_events = json.load(
+        app.open_resource('data/challenge5.json')
+    )
 
     @app.route('/')
     def index():
