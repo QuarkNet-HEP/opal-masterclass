@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "end": "x7624_47178.gif",
+        "side": "s7624_47178.gif",
+        "type": "llgamma"
+    },
+    {
+        "id": 2,
+        "end": "x7575_27685.gif",
+        "side": "s7575_27685.gif",
+        "type": "qqgamma"
+    },
+    {
+        "id": 3,
+        "end": "x7614_47557.gif",
+        "side": "s7614_47557.gif",
+        "type": "tautau"
+    },
+    {
+        "id": 4,
+        "end": "x7463_106117.gif",
+        "side": "s7463_106117.gif",
+        "type": "ffff"
+    },
+    {
+        "id": 5,
+        "end": "x7668_4581.gif",
+        "side": "s7668_4581.gif",
+        "type": "qqqq"
+    }
+]

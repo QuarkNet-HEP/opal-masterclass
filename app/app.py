@@ -1,18 +1,18 @@
 import csv
 import os
+import json
 
 from flask import (
     Flask,
     render_template
 )
 
-csv_dir = os.path.join('./', 'data')
+data_dir = os.path.join('./', 'data')
 
 zevents = []
 wevents = []
 
-
-with open(os.path.join(csv_dir, 'Z-challenge.csv'), 'r') as zcsv:
+with open(os.path.join(data_dir, 'Z-challenge.csv'), 'r') as zcsv:
     csv_reader = csv.reader(zcsv)
     next(csv_reader, None)
 
@@ -24,7 +24,7 @@ with open(os.path.join(csv_dir, 'Z-challenge.csv'), 'r') as zcsv:
             }
         )
 
-with open(os.path.join(csv_dir, 'W-challenge.csv'), 'r') as wcsv:
+with open(os.path.join(data_dir, 'W-challenge.csv'), 'r') as wcsv:
     csv_reader = csv.reader(wcsv)
     next(csv_reader, None)
 
@@ -35,7 +35,27 @@ with open(os.path.join(csv_dir, 'W-challenge.csv'), 'r') as wcsv:
                 'event_id': eid
             }
         )
-        
+
+challenge1_events = json.load(
+    open(os.path.join(data_dir, 'challenge1.json'), 'r')
+)
+
+challenge2_events = json.load(
+    open(os.path.join(data_dir, 'challenge2.json'), 'r')
+)
+
+challenge3_events = json.load(
+    open(os.path.join(data_dir, 'challenge3.json'), 'r')
+)
+
+challenge4_events = json.load(
+    open(os.path.join(data_dir, 'challenge4.json'), 'r')
+)
+
+challenge5_events = json.load(
+    open(os.path.join(data_dir, 'challenge5.json'), 'r')
+)
+
 def create_app():
 
     app = Flask(__name__)
@@ -73,8 +93,9 @@ def create_app():
     @app.route('/challenge1')
     def challenge1():
         return render_template(
-            'introduction.html',
+            'challenge1.html',
             title='Challenge 1',
+            events=challenge1_events
         )
     
     app.add_url_rule('/challenge1', 'challenge1', challenge1)
@@ -83,8 +104,9 @@ def create_app():
     @app.route('/challenge2')
     def challenge2():
         return render_template(
-            'introduction.html',
+            'challenge2.html',
             title='Challenge 2',
+            events=challenge2_events
         )
     
     app.add_url_rule('/challenge2', 'challenge2', challenge2)
@@ -93,8 +115,9 @@ def create_app():
     @app.route('/challenge3')
     def challenge3():
         return render_template(
-            'introduction.html',
+            'challenge3.html',
             title='Challenge 3',
+            events=challenge3_events
         )
     
     app.add_url_rule('/challenge3', 'challenge3', challenge3)
@@ -103,8 +126,9 @@ def create_app():
     @app.route('/challenge4')
     def challenge4():
         return render_template(
-            'introduction.html',
+            'challenge4.html',
             title='Challenge 4',
+            events=challenge4_events
         )
     
     app.add_url_rule('/challenge4', 'challenge4', challenge4)
@@ -113,8 +137,9 @@ def create_app():
     @app.route('/challenge5')
     def challenge5():
         return render_template(
-            'introduction.html',
+            'challenge5.html',
             title='Challenge 5',
+            events=challenge5_events
         )
     
     app.add_url_rule('/challenge5', 'challenge5', challenge5)
@@ -123,8 +148,8 @@ def create_app():
     @app.route('/others')
     def others():
         return render_template(
-            'introduction.html',
-            title='Others',
+            'others.html',
+            title='How to Identify Some Slightly More Complicated Types of Events',
         )
     
     app.add_url_rule('/others', 'others', others)
@@ -133,15 +158,15 @@ def create_app():
     @app.route('/Z')
     def Z():
         return render_template(
-            'introduction.html',
-            title='Z'
+            'Z.html',
+            title='How to Identify Events Containing a Particle-Antiparticle Pair'
         )
     
     @app.route('/W')
     def W():
         return render_template(
-            'introduction.html',
-            title='W'
+            'W.html',
+            title='How to Identify Events Containing a Pair of W Particles'
         )
     
     @app.route('/Zdecays')
