@@ -1,0 +1,36 @@
+<!doctype html>
+<head>
+   <title>{{ title }} </title>
+</head>
+<body>
+  <h1>{{ title }}</h1>
+
+  <p>
+    In the following events a particle-antiparticle pair has been produced.
+    See if you can identify which sort of particle!
+  </p>
+
+  <p>
+  {% for e in events: %}
+  Event {{ e['id'] }}<br>
+  {% endfor %}
+  </p>
+    
+  <p>
+    Once you've successfully identified each of these events,
+    then please proceed to the
+    <a href="{{ url_for('W') }}">next part of the programme</a>,
+    where you will learn how to identify events in which a 
+    W+W- pair has been produced.
+  </p>
+  
+</body>
+<footer>  
+  <p>
+    <a href="{{ url_for('W') }}">Next</a>
+  </p>
+  <p>
+    <a href="{{ url_for('index') }}">Back to start</a>
+  </p>
+</footer>
+
