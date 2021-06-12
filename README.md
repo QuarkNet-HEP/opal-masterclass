@@ -60,9 +60,11 @@ Identify 8 events from all types seen up to now
 - [ ] Extract and use more content from the original site
 - [ ] A lot more can be templated
 - [ ] Create and use a template for challenge events in which side and end views are shown
-- [ ] Deploy at CERN on OpenShift
+- [x] Deploy at CERN on OpenShift
 
 ## Links
+
+* [Current prototype](http://opal-masterclass.web.cern.ch/)
 
 * [Original website](http://www.hep.man.ac.uk/u/events/)
 
