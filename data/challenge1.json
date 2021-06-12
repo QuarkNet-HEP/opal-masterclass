@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "end": "x7708_23918.gif",
+        "side": "s7708_23918.gif",
+        "type": "muon"
+    },
+    {
+        "id": 2,
+        "end": "x7579_31933.gif",
+        "side": "s7579_31933.gif",
+        "type": "electron"
+    },
+    {
+        "id": 3,
+        "end": "x7622_56657.gif",
+        "side": "s7622_56657.gif",
+        "type": "hadron"
+    },
+    {
+        "id": 4,
+        "end": "x7579_41289.gif",
+        "side": "s7579_41289.gif",
+        "type": "electron"
+    },
+    {
+        "id": 5,
+        "end": "x7575_28269.gif",
+        "side": "s7575_28269.gif",
+        "type": "muon"
+    },
+    {
+        "id": 6,
+        "end": "x7639_65135.gif",
+        "side": "s7639_65135.gif",
+        "type": "hadron"
+    },
+    {
+        "id": 7,
+        "end": "x7610_60147.gif",
+        "side": "s7610_60147.gif",
+        "type": "muon"
+    },
+    {
+        "id": 8,
+        "end": "x7635_38802.gif",
+        "side": "s7635_38802.gif",
+        "type": "hadron"
+    },
+    {
+        "id": 9,
+        "end": "x7581_42019.gif",
+        "side": "s7581_42019.gif",
+        "type": "electron"
+    }
+]
