@@ -54,13 +54,13 @@ Identify 8 events from all types seen up to now
 
 ## TO-DO
 
-* Right now the site is plain HTML *a la* the original site: add css and use a framework (like Bootstrap)
-* Extract the information on files and answers for challenge 5
-* For the Z and W measurements we need to determine and compile an answer key
-* Extract and use more content from the original site
-* A lot more can be templated
-* Create and use a template for challenge events in which side and end views are shown
-* Deploy at CERN on OpenShift
+- [ ] Right now the site is plain HTML *a la* the original site: add css and use a framework (like Bootstrap)
+- [ ] Extract the information on files and answers for challenge 5
+- [ ] For the Z and W measurements we need to determine and compile an answer key
+- [ ] Extract and use more content from the original site
+- [ ] A lot more can be templated
+- [ ] Create and use a template for challenge events in which side and end views are shown
+- [ ] Deploy at CERN on OpenShift
 
 ## Links
 
