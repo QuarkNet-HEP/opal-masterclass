@@ -61,8 +61,6 @@ def index():
         'index.html',
         title='OPAL Masterclass',
     )
-        
-app.add_url_rule('/', 'index', index)
     
 @app.route('/intro')
 def intro():
@@ -70,8 +68,6 @@ def intro():
         'introduction.html',
         title='Introduction',
     )
-        
-app.add_url_rule('/intro', 'intro', intro)
     
 @app.route('/detector')
 def detector():
@@ -79,8 +75,6 @@ def detector():
         'detector.html',
         title='The OPAL Detector',
     )
-
-app.add_url_rule('/detector', 'detector', detector)
     
 @app.route('/challenge1')
 def challenge1():
@@ -89,9 +83,15 @@ def challenge1():
         title='Challenge 1',
         events=challenge1_events
     )
-    
-app.add_url_rule('/challenge1', 'challenge1', challenge1)
-    
+
+@app.route('/challenge1/<id>')
+def ch1(id):
+    return render_template(
+        'side_end.html',
+        title=f'Challenge 1: Event {id}',
+        event=list(filter(lambda e: e["id"] == int(id), challenge1_events))[0]
+    )
+
 @app.route('/challenge2')
 def challenge2():
     return render_template(
@@ -99,9 +99,15 @@ def challenge2():
         title='Challenge 2',
         events=challenge2_events
     )
-    
-app.add_url_rule('/challenge2', 'challenge2', challenge2)
-    
+
+@app.route('/challenge2/<id>')
+def ch2(id):
+    return render_template(
+        'side_end.html',
+        title=f'Challenge 2: Event {id}',
+        event=list(filter(lambda e: e["id"] == int(id), challenge2_events))[0]
+    )
+
 @app.route('/challenge3')
 def challenge3():
     return render_template(
@@ -109,9 +115,15 @@ def challenge3():
         title='Challenge 3',
         events=challenge3_events
     )
-    
-app.add_url_rule('/challenge3', 'challenge3', challenge3)
-    
+
+@app.route('/challenge3/<id>')
+def ch3(id):
+    return render_template(
+        'side_end.html',
+        title=f'Challenge 3: Event {id}',
+        event=list(filter(lambda e: e["id"] == int(id), challenge3_events))[0]
+    )
+
 @app.route('/challenge4')
 def challenge4():
     return render_template(
@@ -119,8 +131,6 @@ def challenge4():
         title='Challenge 4',
         events=challenge4_events
     )
-    
-app.add_url_rule('/challenge4', 'challenge4', challenge4)
 
 @app.route('/challenge5')
 def challenge5():
@@ -129,17 +139,21 @@ def challenge5():
         title='Challenge 5',
         events=challenge5_events
     )
-    
-app.add_url_rule('/challenge5', 'challenge5', challenge5)
-    
+
+@app.route('/challenge5/<id>')
+def ch5(id):
+    return render_template(
+        'side_end.html',
+        title=f'Challenge 5: Event {id}',
+        event=list(filter(lambda e: e["id"] == int(id), challenge5_events))[0]
+    )
+
 @app.route('/others')
 def others():
     return render_template(
         'others.html',
         title='How to Identify Some Slightly More Complicated Types of Events',
     )
-    
-app.add_url_rule('/others', 'others', others)
     
 @app.route('/Z')
 def Z():
@@ -170,12 +184,6 @@ def Wdecays():
         title='W challenge',
         events=wevents,
     )
-
-app.add_url_rule('/Z', 'Z', Z)
-app.add_url_rule('/W', 'W', W)
-    
-app.add_url_rule('/Zdecays', 'Zdecays', Zdecays)
-app.add_url_rule('/Wdecays', 'Wdecays', Wdecays)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080)
