@@ -193,32 +193,67 @@ def Wdecays():
         events=wevents,
     )
 
-@app.route('/mumu')
+@app.route('/Z/mumu')
 def mumu():
     return render_template(
         'mumu.html',
         title='Example mu+mu- Events'
     )
 
-@app.route('/ee')
+@app.route('/Z/ee')
 def ee():
     return render_template(
         'ee.html',
         title='Example e+e- Events'
     )
     
-@app.route('/tautau')
+@app.route('/Z/tautau')
 def tautau():
     return render_template(
         'tautau.html',
         title='Example tau+tau- Events'
     )
     
-@app.route('/qq')
+@app.route('/Z/qq')
 def qq():
     return render_template(
         'qq.html',
         title='Example qq Events'
+    )
+
+@app.route('/W/qqqq')
+def qqqq():
+    return render_template(
+        'qqqq.html',
+        title='qqqq'
+    )
+
+@app.route('/W/lnulnu')
+def lnulnu():
+    return render_template(
+        'lnulnu.html',
+        title='lnulnu'
+    )
+
+@app.route('/W/enuqq')
+def enuqq():
+    return render_template(
+        'enuqq.html',
+        title='enuqq'
+    )
+
+@app.route('/W/munuqq')
+def munuqq():
+    return render_template(
+        'munuqq.html',
+        title='munuqq'
+    )
+
+@app.route('/W/taunuqq')
+def taunuqq():
+    return render_template(
+        'taunuqq.html',
+        title='taunuqq'
     )
 
 if __name__ == '__main__':
