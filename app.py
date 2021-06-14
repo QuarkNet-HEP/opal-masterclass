@@ -66,7 +66,14 @@ def index():
         'index.html',
         title='OPAL Masterclass',
     )
-    
+
+@app.route('/contents')
+def contents():
+    return render_template(
+        'contents.html',
+        title='Contents'
+    )
+
 @app.route('/intro')
 def intro():
     return render_template(

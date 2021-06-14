@@ -4,7 +4,7 @@
 {% endblock %}
 
 {% block content %}
-
+<div class="container">
 <h1>{{ title }}</h1>
   
 <p>
@@ -78,9 +78,9 @@
 </p>
 
 <p>
-  <a href="{{url_for('index') }} ">
+  <a href="{{url_for('contents') }} ">
     Back to Home Page with table of contents.
   </a>
 </p>
-  
+</div>  
 {% endblock %}

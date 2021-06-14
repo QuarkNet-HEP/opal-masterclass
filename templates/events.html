@@ -4,12 +4,12 @@
 {% endblock %}
 
 {% block content %}
-
+<div class="container">
 {% for event in events: %}
 <a href="{{ url_for('static', filename='data/'+event.file_name) }}">
   Event {{ event.event_id }}
 </a>
 <br>
 {% endfor %}
-
+</div>
 {% endblock %}

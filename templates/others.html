@@ -4,7 +4,7 @@
 {% endblock %}
 
 {% block content %}
-
+<div class="container">
 <h1>{{ title }}</h1>
 
 <p>
@@ -45,13 +45,11 @@
   "Challenge Part 5".
 </p>
 
-{% endblock %}
-
-{% block footer %}
 <p>
   <a href="{{ url_for('challenge5') }}">Next</a>
 </p>
 <p>
-  <a href="{{ url_for('index') }}">Back to start</a>
+  <a href="{{ url_for('contents') }}">Back to start</a>
 </p>
+</div>
 {% endblock %}

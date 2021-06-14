@@ -4,6 +4,7 @@
 {% endblock %}
 
 {% block content %}
+<div class="container">
 <h1>{{ title }}</h1>
 
 <p>
@@ -108,13 +109,11 @@
   <img src="{{ url_for('static', filename='data/s7708_23918.gif') }}" >
 </p>
 
-{% endblock %}
-
-{% block footer %}
 <p>
   <a href="{{ url_for('challenge1') }}">Next: Challenge (Part 1)</a>
 </p>
 <p>
-  <a href="{{ url_for('index') }}">Back to start</a>
+  <a href="{{ url_for('contents') }}">Back to start</a>
 </p>
+</div>
 {% endblock %}

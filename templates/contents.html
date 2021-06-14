@@ -1,0 +1,73 @@
+{% extends "bootstrap/base.html"%}
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <h1>{{ title }}</h1>
+
+  <ul>
+    <li>
+      <a href="{{ url_for('intro') }}">
+	Introduction
+      </a>
+    </li>
+    <li>
+      <a href="{{ url_for('detector') }}">
+	The Detector and How to Understand the Event Pictures
+      </a>
+    </li>
+    <li>
+      <a href="{{ url_for('challenge1') }}">
+	The Challenge (Part 1)
+      </a>
+    </li>
+    <li>
+      <a href="{{ url_for('Z') }}">
+	How to Identify Events Containing a Particle-Antiparticle Pair
+      </a>
+    </li>
+    <li>
+      <a href="{{ url_for('challenge2') }}">
+	The Challenge (Part 2)
+      </a>
+    </li>
+    <li>
+      <a href="{{ url_for('W') }}">
+	How to Identify Events Containing a Pair of W Particles
+      </a>
+    </li>
+    <li>
+      <a href="{{ url_for('challenge3') }}">
+	The Challenge (Part 3)
+      </a>
+    </li>
+    <li>
+      <a href="{{ url_for('challenge4') }}">
+	The Challenge (Part 4)
+      </a>
+    </li>
+    <li>
+      <a href="{{ url_for('others') }}">
+	How to Identify Slightly More Complicated Types of Event
+      </a>
+    </li>
+    <li>
+      <a href="{{ url_for('challenge5') }}">
+	The Challenge (Part 5)
+      </a>
+    </li>
+    <li>
+      <a href="{{ url_for('Zdecays') }}">
+	Measuring Z Decays
+      </a>
+    </li>
+    <li>
+      <a href="{{ url_for('Wdecays') }}">
+	Measuring W Decays
+      </a>
+    </li>
+  </ul>
+</div>
+{% endblock %}

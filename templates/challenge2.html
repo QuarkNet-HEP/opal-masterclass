@@ -4,6 +4,8 @@
 {% endblock %}
 
 {% block content %}
+<div class="container">
+  
 <h1>{{ title }}</h1>
 
 <p>
@@ -24,15 +26,13 @@
   where you will learn how to identify events in which a 
   W+W- pair has been produced.
 </p>
-  
-{% endblock %}
 
-{% block footer %}
 <p>
   <a href="{{ url_for('W') }}">Next</a>
 </p>
 <p>
-  <a href="{{ url_for('index') }}">Back to start</a>
+  <a href="{{ url_for('contents') }}">Back to start</a>
 </p>
+</div>
 {% endblock %}
 
