@@ -256,6 +256,27 @@ def taunuqq():
         title='taunuqq'
     )
 
+@app.route('/others/ffgamma')
+def ffgamma():
+    return render_template(
+        'ffgamma.html',
+        title='High Energy Photons in Events Containing a Particle-Antiparticle Pair'
+    )
+
+@app.route('/others/qqg')
+def qqg():
+    return render_template(
+        'qqg.html',
+        title='High Energy Gluons in Events Containing a Quark-Antiquark Pair'
+    )
+
+@app.route('/others/ffff')
+def ffff():
+    return render_template(
+        'ffff.html',
+        title='Four Fermion Events'
+    )
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080)
 

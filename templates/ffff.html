@@ -1,0 +1,43 @@
+<!doctype html>
+<head>
+  <title>{{ title }}</title>
+</head>
+<body>
+  <h1>{{ title }}</h1>
+
+  <p>  
+    Remember the example diagram we used to represent 
+    <img src="{{ url_for('static', filename='graphics/tex_llgamma.gif') }}"> events:
+  </p>
+  <p>
+    <img src="{{ url_for('static', filename='graphics/mmp_f.gif') }}">
+  </p>
+  <p>
+    Instead of flying out and being observed in the 
+    calorimeter, sometimes the photon produces an additional particle-antiparticle
+    pair.
+    Such events contain two particle-antiparticle pairs.  
+    For example:
+  </p>
+  <p>
+    <img src="{{ url_for('static', filename='graphics/mmmm_f.gif') }}">.
+  </p>
+  <p>
+    These events go by the jargon name "four fermion" events.
+
+    Here is an example event that contains electron-positron and 
+    muon-antimuon pairs:
+  </p>
+  <p>
+    <img src="{{ url_for('static', filename='data/x7708_10447.gif') }}">
+    <img src="{{ url_for('static', filename='data/s7708_10447.gif') }}">
+  </p>
+
+  
+  <p>
+    <a href="{{ url_for('others') }}">
+      Back</a> to general section on "How to Identify Some Slightly More Complicated 
+      Types of Event".
+  </p>
+  
+</body>
