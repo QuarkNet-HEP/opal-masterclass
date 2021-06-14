@@ -12,13 +12,19 @@
   See if you can identify which sort of particles were produced when the W's
   subsequently decayed!
 </p>
-  
+
+<p>
 {% for e in events: %}
+<p>
 <a href="{{ url_for('ch3', id=e.id) }}">
-  Event {{ e['id'] }}<br>
+  <button type="button" class="btn btn-outline-primary">
+    Event {{ e['id'] }}
+  </button>
 </a>
+</p>
 {% endfor %}
-    
+</p>
+
 <p>
   Once you've successfully identified each of these events,
   then please proceed to the

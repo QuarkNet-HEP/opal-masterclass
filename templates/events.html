@@ -5,11 +5,16 @@
 
 {% block content %}
 <div class="container">
-{% for event in events: %}
-<a href="{{ url_for('static', filename='data/'+event.file_name) }}">
-  Event {{ event.event_id }}
-</a>
-<br>
-{% endfor %}
+
+  {% for event in events: %}
+  <p>
+    <a href="{{ url_for('static', filename='data/'+event.file_name) }}">
+      <button type="button" class="btn btn-outline-primary">
+	Event {{ event.event_id }}
+      </button>
+    </a>
+  </p>
+  {% endfor %}
+  
 </div>
 {% endblock %}

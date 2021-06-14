@@ -12,11 +12,17 @@
   You will meet events of all the different types you have seen up till now.
 </p>
 
+<p>
 {% for e in events: %}
+<p>
 <a href="{{ url_for('ch5', id=e.id) }}">
-  Event {{ e['id'] }}<br>
+   <button type="button" class="btn btn-outline-primary">
+     Event {{ e['id'] }}
+   </button>
 </a>
+</p>
 {% endfor %}
+</p>
 
 <p>
   Once you've successfully identified each of these events,
