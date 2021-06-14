@@ -1,14 +1,122 @@
- [
+[
     {
         "id": 1,
-        "end": "",
-        "side": "",
-        "type": ""
+        "end": "x7639_34683.gif",
+        "side": "s7639_34683.gif",
+        "type": "enuqq"
     },
     {
         "id": 2,
-        "end": "",
-        "side": "",
-        "type": ""
-    }
+        "end": "x7592_31742.gif",
+        "side": "s7592_31742.gif",
+        "type": "tautau"
+    },
+    {
+        "id": 3,
+        "end": "x7639_33934.gif",
+        "side": "s7639_33934.gif",
+        "type": "qqqq"
+    },
+    {
+        "id": 4,
+        "end": "x7658_15872.gif",
+        "side": "s7658_15872.gif",
+        "type": "mumu"
+    },
+    {
+        "id": 5,
+        "end": "x7579_63824.gif",
+        "side": "s7579_63824.gif",
+        "type": "qq"
+    },
+    {
+        "id": 6,
+        "end": "x7575_24642.gif",
+        "side": "s7575_24642.gif",
+        "type": "ee"
+    },
+    {
+	"id": 7,
+	"end": "x7652_45765.gif",
+	"side": "s7652_45765.gif",
+	"type": "qqqq"
+    },
+    {
+	"id": 8,
+	"end": "m7639_5028.gif",
+	"side": "sm7639_5028.gif",
+	"type": "munuqq"
+    },
+    {
+	"id": 9,
+	"end": "x7757_20446.gif",
+	"side": "x7757_20446.gif",
+	"type": "lnulnu"
+    },
+    {
+	"id": 10,
+	"end": "x7614_79868.gif",
+	"side": "s7614_79868.gif",
+	"type": "tautau"
+    },
+    {
+	"id": 11,
+	"end": "x7581_27793.gif",
+	"side": "s7581_27793.gif",
+	"type": "qq"
+    },
+    {
+	"id": 12,
+	"end": "x7652_38925.gif",
+	"side": "s7652_38925.gif",
+	"type": "mumu"
+    },
+    {
+	"id": 13,
+	"end": "x7658_34731.gif",
+	"side": "s7658_34731.gif",
+	"type": "qqqq"
+    },
+    {
+	"id": 14,
+	"end": "x7729_32594.gif",
+	"side": "s7729_32594.gif",
+	"type": "lnulnu"
+    },
+    {
+	"id": 15,
+	"end": "x7655_50502.gif",
+	"side": "s7655_50502.gif",
+	"type": "taunuqq"
+    },
+    {
+	"id": 16,
+	"end": "x7641_55190.gif",
+	"side": "s7641_55190.gif",
+	"type": "mumu"
+    },
+    {
+	"id": 17,
+	"end": "x7650_17577.gif",
+	"side": "s7650_17577.gif",
+	"type": "munuqq"
+    },
+    {
+	"id": 18,
+	"end": "x7614_7601.gif",
+	"side": "s7614_7601.gif",
+	"type": "tautau"
+    },
+    {
+	"id": 19,
+	"end": "x7579_8499.gif",
+	"side": "s7579_8499.gif",
+	"type": "tautau"
+    },
+    {
+	"id": 20,
+	"end": "m7714_37145.gif",
+	"side": "sm7714_37145.gif",
+	"type": "taunuqq"
+    }     
 ]

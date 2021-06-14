@@ -21,15 +21,17 @@
   </p>
 
   <p>
-  {% for e in events: %}
-  Event {{ e['id'] }}<br>
+    {% for e in events: %}
+    <a href="{{ url_for('ch4', id=e.id) }}">
+      Event {{ e['id'] }}<br>
+    </a>
   {% endfor %}
   </p>
     
   <p>
     Once you've successfully identified each of these events,
     then please proceed to the
-    <a href="{{ url_for('challenge4') }}">next part of the programme</a>
+    <a href="{{ url_for('others') }}">next part of the programme</a>
     where you will learn how to identify some slightly more complicated 
     types of "Standard Model" events.
   </p>

@@ -132,6 +132,14 @@ def challenge4():
         events=challenge4_events
     )
 
+@app.route('/challenge4/<id>')
+def ch4(id):
+    return render_template(
+        'side_end.html',
+        title=f'Challenge 4: Event {id}',
+        event=list(filter(lambda e: e["id"] == int(id), challenge4_events))[0]
+    )
+
 @app.route('/challenge5')
 def challenge5():
     return render_template(
@@ -183,6 +191,34 @@ def Wdecays():
         'events.html',
         title='W challenge',
         events=wevents,
+    )
+
+@app.route('/mumu')
+def mumu():
+    return render_template(
+        'mumu.html',
+        title='Example mu+mu- Events'
+    )
+
+@app.route('/ee')
+def ee():
+    return render_template(
+        'ee.html',
+        title='Example e+e- Events'
+    )
+    
+@app.route('/tautau')
+def tautau():
+    return render_template(
+        'tautau.html',
+        title='Example tau+tau- Events'
+    )
+    
+@app.route('/qq')
+def qq():
+    return render_template(
+        'qq.html',
+        title='Example qq Events'
     )
 
 if __name__ == '__main__':
