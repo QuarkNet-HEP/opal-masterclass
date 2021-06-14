@@ -1,166 +1,167 @@
-<!doctype html>
-<head>
-   <title>{{ title }}</title>
-</head>
+{% extends "bootstrap/base.html"%}
+{% block title %}
+{{ title }}
+{% endblock %}
 
-<body>
-  <h1>{{ title }}</h1>
+{% block content %}
 
-  <p>
-    Here is the diagram that represents an electron and positron annihilating to 
-    produce a tau and an antitau.
-  </p>
-  <p>
-    <img src="{{ url_for('static', filename='graphics/tt_f.gif') }}">
-  </p>
-  <p>
-    Such events are rather more difficult
-    to identify than the electron pair and muon pair events that we've looked
-    at so far.
-  </p>
-  <p>
-    We don't actually see the taus in our detector, because
-    after travelling only a fraction of a millimetre a tau decays to produce 
-    other particles.
-  </p>
-  <p>
-    About 17% of taus decay in the following way:
-  </p>
-  <p>
-    <img src="{{ url_for('static', filename='graphics/feynman_tautoe.gif') }}">
-  </p>
-  <p>
-    The neutrinos pass through the entire detector without interacting.
-    Therefore, the only particle we see in the detector is the electron.
-  </p>
-  <p>
-    A further 17% of taus decay to produce a muon (which we see in the 
-    detector) and neutrinos (which we don't see):
-  </p>
-  <p>
-    <img src="{{ url_for('static', filename='graphics/feynman_tautomu.gif') }}">
-  </p>
-  
-  <p>
-    Here is an example event in which a tau-antitau pair is produced back to back.
-    One tau decays to give an electron and the other tau decays to give a muon.
-  </p>
-  
-  <p>
-    Example Event Number 1
-  </p>
-  
-  <p>
-    End-On View of Event
-  </p>
-  
-  <p>
-    <img src="{{ url_for('static', filename='data/x7592_36349.gif') }}">
-  </p>
-  
-  <p>
-    Side View of Event
-  </p>
-  
-  <p>
-    <img src="{{ url_for('static', filename='data/s7592_36349.gif') }}">
-  </p>
-  
-  <p>
-    Example Event Number 2
-  </p>
-  
-  <p>
-    The remaining 66% of taus decay to produce a neutrino and one or more hadrons.
-    In 50% a single charged hadron is produced and in 16% three charged hadrons 
-    are produced.
-  </p>
-  <p>
-    In the next example event the tau has decayed to produce three charged 
-    hadrons and the antitau has decayed to produce a 
-    single charged hadron.
-  </p>
+<h1>{{ title }}</h1>
 
-  <p>
-    End-On View of Event
-  </p>
+<p>
+  Here is the diagram that represents an electron and positron annihilating to 
+  produce a tau and an antitau.
+</p>
+<p>
+  <img src="{{ url_for('static', filename='graphics/tt_f.gif') }}">
+</p>
+<p>
+  Such events are rather more difficult
+  to identify than the electron pair and muon pair events that we've looked
+  at so far.
+</p>
+<p>
+  We don't actually see the taus in our detector, because
+  after travelling only a fraction of a millimetre a tau decays to produce 
+  other particles.
+</p>
+<p>
+  About 17% of taus decay in the following way:
+</p>
+<p>
+  <img src="{{ url_for('static', filename='graphics/feynman_tautoe.gif') }}">
+</p>
+<p>
+  The neutrinos pass through the entire detector without interacting.
+  Therefore, the only particle we see in the detector is the electron.
+</p>
+<p>
+  A further 17% of taus decay to produce a muon (which we see in the 
+  detector) and neutrinos (which we don't see):
+</p>
+<p>
+  <img src="{{ url_for('static', filename='graphics/feynman_tautomu.gif') }}">
+</p>
+
+<p>
+  Here is an example event in which a tau-antitau pair is produced back to back.
+  One tau decays to give an electron and the other tau decays to give a muon.
+</p>
+
+<p>
+  Example Event Number 1
+</p>
+
+<p>
+  End-On View of Event
+</p>
+
+<p>
+  <img src="{{ url_for('static', filename='data/x7592_36349.gif') }}">
+</p>
+
+<p>
+  Side View of Event
+</p>
+
+<p>
+  <img src="{{ url_for('static', filename='data/s7592_36349.gif') }}">
+</p>
+
+<p>
+  Example Event Number 2
+</p>
+
+<p>
+  The remaining 66% of taus decay to produce a neutrino and one or more hadrons.
+  In 50% a single charged hadron is produced and in 16% three charged hadrons 
+  are produced.
+</p>
+<p>
+  In the next example event the tau has decayed to produce three charged 
+  hadrons and the antitau has decayed to produce a 
+  single charged hadron.
+</p>
+
+<p>
+  End-On View of Event
+</p>
+
+<p>
+  <img src="{{ url_for('static', filename='data/x7624_27103.gif') }}">
+</p>
+
+<p>
+  The three charged particle tracks from the tau decay can been seen more easily
+  if we zoom in a bit closer.
+<p>
   
-  <p>
-    <img src="{{ url_for('static', filename='data/x7624_27103.gif') }}">
-  </p>
+<p>
+  Zoom of End-On View of Event
+</p>
+
+<p>
+  <img src="{{ url_for('static', filename='data/zoom7624_27103.gif') }}">
+</p>
+
+<p>
+  Side View of Event
+</p>
+
+<p>
+  <img src="{{ url_for('static', filename='data/s7624_27103.gif') }}">
+</p>
+
+<p>
+  Now let's consider a class of 
+  events that are particularly difficult
+  to identify correctly.
+  What if the tau decays to produce a muon and the antitau decays to produce
+  an antimuon?
+  In our detector we will, therefore, observe a back-to-back muon-antimuon pair.
+  How will we distinguish such an event from one in which 
+  a Z decays directly to a muon-antimuon pair?
+  Remember that the tau decays to produce two neutrinos in addition to the muon.
+  (Look back at the diagram for tau decay further up the page.)
+  Therefore the energy of the original tau is shared between the two neutrinos
+  and the muon.
+  Thus the momentum of a muon from the decay of a tau 
+  is smaller than the momentum of a muon produced
+  when a Z decays directly to a muon-antimuon pair.
+  Here is just such an event.
+  Notice that, in this particular event,
+  both the muons have momentum of less than 16 GeV.
+</p>
   
-  <p>
-    The three charged particle tracks from the tau decay can been seen more easily
-    if we zoom in a bit closer.
-  <p>
-    
-  <p>
-    Zoom of End-On View of Event
-  </p>
+<p>
+  Example Event Number 3
+</p>
+
+<p>
+  End-On View of Event
+</p>
   
-  <p>
-    <img src="{{ url_for('static', filename='data/zoom7624_27103.gif') }}">
-  </p>
+<p>
+  <img src="{{ url_for('static', filename='data/x7610_33032.gif') }}">
+</p>
   
-  <p>
-    Side View of Event
-  </p>
+<p>
+  Next take a look at some
+  <a href="{{ url_for('qq') }}">
+    example <img src="{{ url_for('static', filename='graphics/tex_qq.gif') }}"> events.
+  </a>
+</p>
+
+<p>
+  <a href="{{ url_for('Z') }}">
+    Back to general section on "How to Identify Events Containing 
+    a Particle-Antiparticle Pair".
+  </a>
+</p>
+
+<p>
+  <a href="{{url_for('index') }} ">
+    Back to Home Page with table of contents.
+  </a>
+</p>
   
-  <p>
-    <img src="{{ url_for('static', filename='data/s7624_27103.gif') }}">
-  </p>
-  
-  <p>
-    Now let's consider a class of 
-    events that are particularly difficult
-    to identify correctly.
-    What if the tau decays to produce a muon and the antitau decays to produce
-    an antimuon?
-    In our detector we will, therefore, observe a back-to-back muon-antimuon pair.
-    How will we distinguish such an event from one in which 
-    a Z decays directly to a muon-antimuon pair?
-    Remember that the tau decays to produce two neutrinos in addition to the muon.
-    (Look back at the diagram for tau decay further up the page.)
-    Therefore the energy of the original tau is shared between the two neutrinos
-    and the muon.
-    Thus the momentum of a muon from the decay of a tau 
-    is smaller than the momentum of a muon produced
-    when a Z decays directly to a muon-antimuon pair.
-    Here is just such an event.
-    Notice that, in this particular event,
-    both the muons have momentum of less than 16 GeV.
-  </p>
-  
-  <p>
-    Example Event Number 3
-  </p>
-  
-  <p>
-    End-On View of Event
-  </p>
-  
-  <p>
-    <img src="{{ url_for('static', filename='data/x7610_33032.gif') }}">
-  </p>
-  
-  <p>
-    Next take a look at some
-    <a href="{{ url_for('qq') }}">
-      example <img src="{{ url_for('static', filename='graphics/tex_qq.gif') }}"> events.
-    </a>
-  </p>
-  
-  <p>
-    <a href="{{ url_for('Z') }}">
-      Back to general section on "How to Identify Events Containing 
-      a Particle-Antiparticle Pair".
-    </a>
-  </p>
-  
-  <p>
-    <a href="{{url_for('index') }} ">
-      Back to Home Page with table of contents.
-    </a>
-  </p>
-  
-</body>
+{% endblock %}

@@ -1,72 +1,74 @@
-<!doctype html>
-<head>
-  <title>{{ title }}</title>
-</head>
-<body>
-  <h1>{{ title }}</h1>
+{% extends "bootstrap/base.html"%}
+{% block title %}
+{{ title }}
+{% endblock %}
 
-  <p>  
-    Gluons are the particles responsible for holding the quarks together inside the
-    proton, neutron and other hadrons.
-  </p>
-  <p>
-    Remember the diagram we used to represent 
-    <img src="{{ url_for('static', filename='graphics/tex_qq.gif') }}"> events:
-  </p>
-  <p>
-    <img src="{{ url_for('static', filename='graphics/qq_f.gif') }}">
-  </p>
-  <p>
-    A high energy gluon can be radiated from either the quark or the antiquark
-    as shown in the following
-    diagram:
-  </p>
-  <p>
-    <img src="{{ url_for('static', filename='graphics/qqg_f.gif') }}">.
-  </p>
-  <p>
-    Notice this diagram looks quite similar to that for the radiation of a photon 
-    from a quark, which we looked at in the 
-    <a href="{{ url_for('ffgamma') }}">previous section.</a>
-    Unlike a photon we do not observe the gluon directly in our detector.
-    Instead the gluon produces a shower (or "jet") of 
-    particles, just like a quark, and it is this jet of particles 
-    we observe in our detector.
-  </p>
-  <p>
-    The presence of a gluon in addition to a quark-antiquark
-    pair produces an event containing three jets:
-    Here is an example event:
-  </p>
+{% block content %}
 
-  <p>
-    <img src="{{ url_for('static', filename='data/x7579_6540.gif') }}">
-    <img src="{{ url_for('static', filename='data/s7579_6540.gif') }}">
-  </p>
+<h1>{{ title }}</h1>
 
-  <p>
-    If two high energy gluons are radiated then we may see events with
-    four jets:
-    <img src="{{ url_for('static', filename='graphics/tex_qqgg.gif') }}">.
-  <p>
-    Notice that such events can start to look very much like the 
-    <a href="{{ url_for('qqqq') }}"> 
-      <img src="{{ url_for('static', filename='graphics/tex_qqqq.gif') }}">
-    </a>events we looked at in an earlier section!
-    Sometimes it is impossible to say if a particular event belongs to one
-    type or the other.
-  </p>
+<p>  
+  Gluons are the particles responsible for holding the quarks together inside the
+  proton, neutron and other hadrons.
+</p>
+<p>
+  Remember the diagram we used to represent 
+  <img src="{{ url_for('static', filename='graphics/tex_qq.gif') }}"> events:
+</p>
+<p>
+  <img src="{{ url_for('static', filename='graphics/qq_f.gif') }}">
+</p>
+<p>
+  A high energy gluon can be radiated from either the quark or the antiquark
+  as shown in the following
+  diagram:
+</p>
+<p>
+  <img src="{{ url_for('static', filename='graphics/qqg_f.gif') }}">.
+</p>
+<p>
+  Notice this diagram looks quite similar to that for the radiation of a photon 
+  from a quark, which we looked at in the 
+  <a href="{{ url_for('ffgamma') }}">previous section.</a>
+  Unlike a photon we do not observe the gluon directly in our detector.
+  Instead the gluon produces a shower (or "jet") of 
+  particles, just like a quark, and it is this jet of particles 
+  we observe in our detector.
+</p>
+<p>
+  The presence of a gluon in addition to a quark-antiquark
+  pair produces an event containing three jets:
+  Here is an example event:
+</p>
 
-  <p>
-    <a href="{{ url_for('ffff') }}">
-      Next</a> take a look at some example "four fermion"
-      events.
-  </p>
+<p>
+  <img src="{{ url_for('static', filename='data/x7579_6540.gif') }}">
+  <img src="{{ url_for('static', filename='data/s7579_6540.gif') }}">
+</p>
 
-  <p>
-    <a href="{{ url_for('others') }}">
-      Back</a> to general section on "How to Identify Some Slightly More Complicated 
-      Types of Event".
-  </p>
+<p>
+  If two high energy gluons are radiated then we may see events with
+  four jets:
+  <img src="{{ url_for('static', filename='graphics/tex_qqgg.gif') }}">.
+<p>
+  Notice that such events can start to look very much like the 
+  <a href="{{ url_for('qqqq') }}"> 
+    <img src="{{ url_for('static', filename='graphics/tex_qqqq.gif') }}">
+  </a>events we looked at in an earlier section!
+  Sometimes it is impossible to say if a particular event belongs to one
+  type or the other.
+</p>
+
+<p>
+  <a href="{{ url_for('ffff') }}">
+    Next</a> take a look at some example "four fermion"
+  events.
+</p>
+
+<p>
+  <a href="{{ url_for('others') }}">
+    Back</a> to general section on "How to Identify Some Slightly More Complicated 
+  Types of Event".
+</p>
   
-</body>
+{% endblock %}

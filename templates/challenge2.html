@@ -1,36 +1,38 @@
-<!doctype html>
-<head>
-   <title>{{ title }} </title>
-</head>
-<body>
-  <h1>{{ title }}</h1>
+{% extends "bootstrap/base.html"%}
+{% block title %}
+{{ title }}
+{% endblock %}
 
-  <p>
-    In the following events a particle-antiparticle pair has been produced.
-    See if you can identify which sort of particle!
-  </p>
+{% block content %}
+<h1>{{ title }}</h1>
 
-  {% for e in events: %}
-  <a href="{{ url_for('ch2', id=e.id) }}">
-    Event {{ e['id'] }}<br>
-  </a>
-  {% endfor %}
+<p>
+  In the following events a particle-antiparticle pair has been produced.
+  See if you can identify which sort of particle!
+</p>
+
+{% for e in events: %}
+<a href="{{ url_for('ch2', id=e.id) }}">
+  Event {{ e['id'] }}<br>
+</a>
+{% endfor %}
     
-  <p>
-    Once you've successfully identified each of these events,
-    then please proceed to the
-    <a href="{{ url_for('W') }}">next part of the programme</a>,
-    where you will learn how to identify events in which a 
-    W+W- pair has been produced.
-  </p>
+<p>
+  Once you've successfully identified each of these events,
+  then please proceed to the
+  <a href="{{ url_for('W') }}">next part of the programme</a>,
+  where you will learn how to identify events in which a 
+  W+W- pair has been produced.
+</p>
   
-</body>
-<footer>  
-  <p>
-    <a href="{{ url_for('W') }}">Next</a>
-  </p>
-  <p>
-    <a href="{{ url_for('index') }}">Back to start</a>
-  </p>
-</footer>
+{% endblock %}
+
+{% block footer %}
+<p>
+  <a href="{{ url_for('W') }}">Next</a>
+</p>
+<p>
+  <a href="{{ url_for('index') }}">Back to start</a>
+</p>
+{% endblock %}
 

@@ -1,93 +1,94 @@
-<!doctype html>
-<head>
-  <title>{{ title }}</title>
-</head>
-<body>
+{% extends "bootstrap/base.html"%}
+{% block title %}
+{{ title }}
+{% endblock %}
 
-  <h1>OPAL Masterclass</h1>
+{% block content %}
+<h1>OPAL Masterclass</h1>
 
-  <p>
-    The purpose of this masterclass is to allow you to identify for yourself 
-    some  interesting particle physics interactions or "events".
-    These events have been seen using an 
-    experiment called
-    <a href="http://www.cern.ch/Opal/welcome.html" target="_blank"> OPAL,</a>
-    at <a href="//www.cern.ch/" target="_blank">CERN</a>, near to Geneva, Switzerland. 
-    This experiment ran at 
-    <a href="http://www.cern.ch/CERN/Divisions/PS/PSComplex/CERNAcc.html">LEP</a>
-    (the Large Electron-Positron collider).
-  </p>
-  <p>
-    The emphasis is very much on your active participation.
-    We have tried to explain as simply as possible a few important
-    things you need to know 
-    about our experiment and the different types of events that can occur.
-    But the main parts are where you play the role of "particle detective" 
-    and identify for yourself pictures of different types of event.
-  </p>
+<p>
+  The purpose of this masterclass is to allow you to identify for yourself 
+  some  interesting particle physics interactions or "events".
+  These events have been seen using an 
+  experiment called
+  <a href="http://www.cern.ch/Opal/welcome.html" target="_blank"> OPAL,</a>
+  at <a href="//www.cern.ch/" target="_blank">CERN</a>, near to Geneva, Switzerland. 
+  This experiment ran at 
+  <a href="http://www.cern.ch/CERN/Divisions/PS/PSComplex/CERNAcc.html">LEP</a>
+  (the Large Electron-Positron collider).
+</p>
+<p>
+  The emphasis is very much on your active participation.
+  We have tried to explain as simply as possible a few important
+  things you need to know 
+  about our experiment and the different types of events that can occur.
+  But the main parts are where you play the role of "particle detective" 
+  and identify for yourself pictures of different types of event.
+</p>
 
 
-  <ul>
-    <li>
-      <a href="{{ url_for('intro') }}">
-	Introduction
-      </a>
-    </li>
-    <li>
-      <a href="{{ url_for('detector') }}">
-	The Detector and How to Understand the Event Pictures
-      </a>
-    </li>
-    <li>
-      <a href="{{ url_for('challenge1') }}">
-	The Challenge (Part 1)
-      </a>
-    </li>
-    <li>
-      <a href="{{ url_for('Z') }}">
-	How to Identify Events Containing a Particle-Antiparticle Pair
-      </a>
-    </li>
-    <li>
-      <a href="{{ url_for('challenge2') }}">
-	The Challenge (Part 2)
-      </a>
-    </li>
-    <li>
-      <a href="{{ url_for('W') }}">
-	How to Identify Events Containing a Pair of W Particles
-      </a>
-    </li>
-    <li>
-      <a href="{{ url_for('challenge3') }}">
-	The Challenge (Part 3)
-      </a>
-    </li>
-    <li>
-      <a href="{{ url_for('challenge4') }}">
-	The Challenge (Part 4)
-      </a>
-    </li>
-    <li>
-      <a href="{{ url_for('others') }}">
-	How to Identify Slightly More Complicated Types of Event
-      </a>
-    </li>
-    <li>
-      <a href="{{ url_for('challenge5') }}">
-	The Challenge (Part 5)
-      </a>
-    </li>
-    <li>
-      <a href="{{ url_for('Zdecays') }}">
-	Measuring Z Decays
-      </a>
-    </li>
-    <li>
-      <a href="{{ url_for('Wdecays') }}">
-	Measuring W Decays
-      </a>
-    </li>
-  </ul>
+<ul>
+  <li>
+    <a href="{{ url_for('intro') }}">
+      Introduction
+    </a>
+  </li>
+  <li>
+    <a href="{{ url_for('detector') }}">
+      The Detector and How to Understand the Event Pictures
+    </a>
+  </li>
+  <li>
+    <a href="{{ url_for('challenge1') }}">
+      The Challenge (Part 1)
+    </a>
+  </li>
+  <li>
+    <a href="{{ url_for('Z') }}">
+      How to Identify Events Containing a Particle-Antiparticle Pair
+    </a>
+  </li>
+  <li>
+    <a href="{{ url_for('challenge2') }}">
+      The Challenge (Part 2)
+    </a>
+  </li>
+  <li>
+    <a href="{{ url_for('W') }}">
+      How to Identify Events Containing a Pair of W Particles
+    </a>
+  </li>
+  <li>
+    <a href="{{ url_for('challenge3') }}">
+      The Challenge (Part 3)
+    </a>
+  </li>
+  <li>
+    <a href="{{ url_for('challenge4') }}">
+      The Challenge (Part 4)
+    </a>
+  </li>
+  <li>
+    <a href="{{ url_for('others') }}">
+      How to Identify Slightly More Complicated Types of Event
+    </a>
+  </li>
+  <li>
+    <a href="{{ url_for('challenge5') }}">
+      The Challenge (Part 5)
+    </a>
+  </li>
+  <li>
+    <a href="{{ url_for('Zdecays') }}">
+      Measuring Z Decays
+    </a>
+  </li>
+  <li>
+    <a href="{{ url_for('Wdecays') }}">
+      Measuring W Decays
+    </a>
+  </li>
+</ul>
 
-</body>
+{% endblock %}
+

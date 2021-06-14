@@ -1,94 +1,94 @@
-<!doctype html>
+{% extends "bootstrap/base.html"%}
+{% block title %}
+{{ title }}
+{% endblock %}
 
-<head>
-  <title>{{ title }}</title>
-</head>
+{% block content %}
 
-<body>
-  <h1>{{ title }}</h1>
+<h1>{{ title }}</h1>
 
-  <p>
-    A high energy quark produces a whole shower (or "jet") of 
-    particles which fly off in the direction of the original quark.
-    It is this jet of particles (rather than the original quark) that
-    we observe in our detector.
-  </p>
-  <p>
-    When a Z decays to produce a back-to-back quark-antiquark pair
-    we therefore expect to see a back-to-back pair of jets in the detector.
-    Most of the particles in these jets are hadrons.
-    We therefore see a number of charged particle tracks and energy deposits 
-    in both the electromagnetic and hadronic calorimeters.
-  </p>
-  <p>
-    Here are a couple of example events.
-  </p>
+<p>
+  A high energy quark produces a whole shower (or "jet") of 
+  particles which fly off in the direction of the original quark.
+  It is this jet of particles (rather than the original quark) that
+  we observe in our detector.
+</p>
+<p>
+  When a Z decays to produce a back-to-back quark-antiquark pair
+  we therefore expect to see a back-to-back pair of jets in the detector.
+  Most of the particles in these jets are hadrons.
+  We therefore see a number of charged particle tracks and energy deposits 
+  in both the electromagnetic and hadronic calorimeters.
+</p>
+<p>
+  Here are a couple of example events.
+</p>
 
-  <p>
-    Example Event Number 1
-  </p>
+<p>
+  Example Event Number 1
+</p>
 
-  <p>
-    End-On View of Event
-  </p>
+<p>
+  End-On View of Event
+</p>
+
+<p>
+  <img src="{{ url_for('static', filename='data/x7575_15190.gif') }}">
+</p>
+
+<p>
+  Side View of Event
+</p>
+
+<p>
+  <img src="{{ url_for('static', filename='data/s7575_15190.gif') }}">
+</p>
+
+<p>
+  Note that there may sometimes be a few particles that 
+  are produced at a large angle to the two jets.
+  However, these tend to be fairly low momentum particles 
+  (as can be seen in this event by the
+  fact they are colour-coded yellow and green).
+  The high momentum particles tend to be close together in the centre of the
+  jet.
+</p>
+
+<p>
+  Example Event Number 2
+</p>
+
+<p>
+  Sometimes a jet may contain an electron or muon as well as hadrons, as is
+  the case in the second example:
+</p>
+
+<p>
+  End-On View of Event
+</p>
+<p>
+  <img src="{{ url_for('static', filename='data/x7579_49567.gif') }}">
+</p>
+
+<p>
+  Side View of Event
+</p>
+
+<p>
+  <img src="{{ url_for('static', filename='data/s7579_49567.gif') }}">
+</p>
+
+<p>
+  <a href="{{ url_for('Z') }}">
+    Back to general section on "How to Identify Events Containing 
+    a Particle-Antiparticle Pair".
+  </a>
+</p>
   
-  <p>
-    <img src="{{ url_for('static', filename='data/x7575_15190.gif') }}">
-  </p>
-
-  <p>
-    Side View of Event
-  </p>
-
-  <p>
-    <img src="{{ url_for('static', filename='data/s7575_15190.gif') }}">
-  </p>
+<p>
+  <a href="{{url_for('index') }} ">
+    Back to Home Page with table of contents.
+  </a>
+</p>
   
-  <p>
-    Note that there may sometimes be a few particles that 
-    are produced at a large angle to the two jets.
-    However, these tend to be fairly low momentum particles 
-    (as can be seen in this event by the
-    fact they are colour-coded yellow and green).
-    The high momentum particles tend to be close together in the centre of the
-    jet.
-  </p>
- 
-  <p>
-    Example Event Number 2
-  </p>
-
-   <p>
-    Sometimes a jet may contain an electron or muon as well as hadrons, as is
-    the case in the second example:
-  </p>
-
-  <p>
-    End-On View of Event
-  </p>
-  <p>
-    <img src="{{ url_for('static', filename='data/x7579_49567.gif') }}">
-  </p>
-
-  <p>
-    Side View of Event
-  </p>
-
-  <p>
-    <img src="{{ url_for('static', filename='data/s7579_49567.gif') }}">
-  </p>
-  
-  <p>
-    <a href="{{ url_for('Z') }}">
-      Back to general section on "How to Identify Events Containing 
-      a Particle-Antiparticle Pair".
-    </a>
-  </p>
-  
-  <p>
-    <a href="{{url_for('index') }} ">
-      Back to Home Page with table of contents.
-    </a>
-  </p>
-  
-</body>
+{% endblock %}

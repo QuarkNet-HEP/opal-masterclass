@@ -1,80 +1,81 @@
-<!doctype html>
-<head>
-   <title>{{ title }}</title>
-</head>
+{% extends "bootstrap/base.html"%}
+{% block title %}
+{{ title }}
+{% endblock %}
 
-<body>
-  <h1>{{ title }} </h1>
+{% block content %}
+
+<h1>{{ title }} </h1>
   
-  <p>
-    Events in which a muon-antimuon pair are produced are fairly easy to 
-    identify.
-    We see a back-to-back pair of high momentum tracks pointing at signals
+<p>
+  Events in which a muon-antimuon pair are produced are fairly easy to 
+  identify.
+  We see a back-to-back pair of high momentum tracks pointing at signals
     in the muon chambers.
-  </p>
+</p>
   
-  <p>
-    Here are a couple of example events.
-  </p>
+<p>
+  Here are a couple of example events.
+</p>
 
-  <p>
-    Example Event Number 1
-  </p>
+<p>
+  Example Event Number 1
+</p>
 
-  <p>
-    End-On View of Event
-  </p>
+<p>
+  End-On View of Event
+</p>
 
-  <p>
-    <img src="{{ url_for('static', filename='data/x7592_53793.gif') }}">
-  </p>
+<p>
+  <img src="{{ url_for('static', filename='data/x7592_53793.gif') }}">
+</p>
 
-  <p>
-    Side View of Event
-  </p>
+<p>
+  Side View of Event
+</p>
 
-  <p>
-    <img src="{{ url_for('static', filename='data/s7592_53793.gif') }}">
-  </p>
+<p>
+  <img src="{{ url_for('static', filename='data/s7592_53793.gif') }}">
+</p>
 
-  <p>
-    Example Event Number 2
-  </p>
+<p>
+  Example Event Number 2
+</p>
 
-  <p>
-    End-On View of Event
-  </p>
+<p>
+  End-On View of Event
+</p>
 
-  <p>
-    <img src="{{ url_for('static', filename='data/x7610_54683.gif') }}">
-  </p>
+<p>
+  <img src="{{ url_for('static', filename='data/x7610_54683.gif') }}">
+</p>
 
-  <p>
-    Side View of Event
-  </p>
+<p>
+  Side View of Event
+</p>
 
-  <p>
-    <img src="{{ url_for('static', filename='data/s7610_54683.gif') }}">
-  </p>
+<p>
+  <img src="{{ url_for('static', filename='data/s7610_54683.gif') }}">
+</p>
 
-  <p>
-    Next take a look at some
-    <a href="{{ url_for('ee') }}">
-      example <img src="{{ url_for('static', filename='graphics/tex_ee.gif') }}"> events.
-    </a>
-  </p>
+<p>
+  Next take a look at some
+  <a href="{{ url_for('ee') }}">
+    example <img src="{{ url_for('static', filename='graphics/tex_ee.gif') }}"> events.
+  </a>
+</p>
   
-  <p>
-    <a href="{{ url_for('Z') }}">
-      Back to general section on "How to Identify Events Containing 
-      a Particle-Antiparticle Pair".
-    </a>
-  </p>
+<p>
+  <a href="{{ url_for('Z') }}">
+    Back to general section on "How to Identify Events Containing 
+    a Particle-Antiparticle Pair".
+  </a>
+</p>
 
-  <p>
-    <a href="{{url_for('index') }} ">
-      Back to Home Page with table of contents.
-    </a>
-  </p>
+<p>
+  <a href="{{url_for('index') }} ">
+    Back to Home Page with table of contents.
+  </a>
+</p>
 
-</body>
+{% endblock %}

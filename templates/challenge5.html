@@ -1,33 +1,35 @@
-<!doctype html>
-<head>
-   <title>{{ title }} </title>
-</head>
-<body>
-  <h1>{{ title }}</h1>
+{% extends "bootstrap/base.html"%}
+{% block title %}
+{{ title }}
+{% endblock %}
 
-  <p>
-    This is the most difficult of all the challenge sections.
-    You will meet events of all the different types you have seen up till now.
-  </p>
+{% block content %}
+<h1>{{ title }}</h1>
 
-  {% for e in events: %}
-  <a href="{{ url_for('ch5', id=e.id) }}">
-    Event {{ e['id'] }}<br>
-  </a>
-  {% endfor %}
-    
-  <p>
-    Once you've successfully identified each of these events,
-    then please proceed to the
-    <a href="{{ url_for('Zdecays') }}">next part of the programme</a>.
-  </p>
+<p>
+  This is the most difficult of all the challenge sections.
+  You will meet events of all the different types you have seen up till now.
+</p>
+
+{% for e in events: %}
+<a href="{{ url_for('ch5', id=e.id) }}">
+  Event {{ e['id'] }}<br>
+</a>
+{% endfor %}
+
+<p>
+  Once you've successfully identified each of these events,
+  then please proceed to the
+  <a href="{{ url_for('Zdecays') }}">next part of the programme</a>.
+</p>
   
-</body>
-<footer>  
-  <p>
-    <a href="{{ url_for('Zdecays') }}">Next</a>
-  </p>
-  <p>
-    <a href="{{ url_for('index') }}">Back to start</a>
-  </p>
-</footer>
+{% endblock %}
+
+{% block footer %}
+<p>
+  <a href="{{ url_for('Zdecays') }}">Next</a>
+</p>
+<p>
+  <a href="{{ url_for('index') }}">Back to start</a>
+</p>
+{% endblock %}

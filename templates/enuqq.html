@@ -1,13 +1,15 @@
-<!doctype html>
-<head>
-  <title>{{ title }}</title>
-</head>
-<body>
-  <h1>{{ title }}</h1>
+{% extends "bootstrap/base.html"%}
+{% block title %}
+{{ title }}
+{% endblock %}
 
-  <img src="{{ url_for('static', filename='data/x7590_9003.gif') }}"> 
-  <img src="{{ url_for('static', filename='data/s7590_9003.gif') }}">
+{% block content %}
 
-  <img src="{{ url_for('static', filename='data/m7590_9003.gif') }}">
+<h1>{{ title }}</h1>
 
-</body>
+<img src="{{ url_for('static', filename='data/x7590_9003.gif') }}"> 
+<img src="{{ url_for('static', filename='data/s7590_9003.gif') }}">
+
+<img src="{{ url_for('static', filename='data/m7590_9003.gif') }}">
+
+{% endblock %}

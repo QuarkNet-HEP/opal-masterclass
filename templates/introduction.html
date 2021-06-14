@@ -1,15 +1,19 @@
-<!doctype html>
-<head>
-  <title>{{ title }}</title>
-</head>
-<body>
-  <h1>{{ title }}</h1>
-</body>
-<footer>  
-  <p>
-    <a href="{{ url_for('detector') }}">Next: The Detector and How to Understand the Event Pictures</a>
-  </p>
-  <p>
-    <a href="{{ url_for('index') }}">Back to start</a>
-  </p>
-</footer>
+{% extends "bootstrap/base.html"%}
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+
+<h1>{{ title }}</h1>
+
+{% endblock %}
+
+{% block footer %}
+<p>
+  <a href="{{ url_for('detector') }}">Next: The Detector and How to Understand the Event Pictures</a>
+</p>
+<p>
+  <a href="{{ url_for('index') }}">Back to start</a>
+</p>
+{% endblock %}
