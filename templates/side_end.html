@@ -8,11 +8,11 @@
 <h1>{{ title }}</h1>
 
 <p>
-  <img src="{{ url_for('static', filename='data/'+event.end) }}" title="{{ event.type }}">
+  <img class="img-thumbnail" src="{{ url_for('static', filename='data/'+event.end) }}" title="{{ event.type }}">
 </p>
 
 <p>
-  <img src="{{ url_for('static', filename='data/'+event.side) }}" title="{{ event.type }}">
+  <img class="img-thumbnail" src="{{ url_for('static', filename='data/'+event.side) }}" title="{{ event.type }}">
 </p>
 </div>  
 {% endblock %}
