@@ -52,16 +52,6 @@ Identify 8 events from all types seen up to now
 
 **Note:** there are 3 events missing (200, 441, and 450)
 
-## TO-DO
-
-- [ ] Right now the site is plain HTML *a la* the original site: add css and use a framework (like Bootstrap)
-- [x] Extract the information on files and answers for challenge 5
-- [ ] For the Z and W measurements we need to determine and compile an answer key
-- [ ] Extract and use more content from the original site
-- [ ] A lot more can be templated
-- [x] Create and use a template for challenge events in which side and end views are shown
-- [x] Deploy at CERN on OpenShift
-
 ## Links
 
 * [Current prototype](http://opal-masterclass.web.cern.ch/)

@@ -1,0 +1,33 @@
+{% extends "bootstrap/base.html"%}
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <h1>{{ title }}</h1>
+  <p>
+    This masterclass is based on the
+    <a href="http://www.hep.man.ac.uk/u/events/">
+      original OPAL Masterclass
+    </a> 
+    developed
+    by Terry Wyatt. Original contributors include Pezouna Pieri, Akram Khan,
+    David Ward, Nigel Watson, and Andrew McNab. More information can be found
+    <a href="http://www.hep.man.ac.uk/u/events/acknowledgements.html">here</a>.
+  </p>
+  <p>
+    This version is being developed by Tom McCauley. The source code, data, and
+    outstanding issues are on
+    <a href="https://github.com/QuarkNet-HEP/opal-masterclass">
+      GitHub</a>.
+  </p>
+  
+  <p>
+    <a href="{{url_for('contents') }}">
+      Back
+    </a>
+  </p>
+
+</div>
+{% endblock %}

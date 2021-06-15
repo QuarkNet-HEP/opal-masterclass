@@ -67,6 +67,13 @@ def index():
         title='OPAL Masterclass',
     )
 
+@app.route('/acknowledgements')
+def acknowledgements():
+    return render_template(
+        'acknowledgements.html',
+        title='Acknowledgements'
+    )
+
 @app.route('/contents')
 def contents():
     return render_template(
