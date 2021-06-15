@@ -1,0 +1,101 @@
+{% extends "bootstrap/base.html"%}
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <h1>{{ title }}</h1>
+  
+  <p>
+    In the challenge part 2 you learned how to distinguish events in which 
+    a Z<sup>0</sup> decays to
+    produce the different sorts of particle-antiparticle pairs.
+    Now you might like to try your hand at one of the important measurements 
+    we make at LEP.
+    This is to measure the fractions of Z<sup>0</sup>s that decay to each type of 
+    particle-antiparticle pair.
+  </p>
+  <p>
+    In this section you will be provided with a large number of events 
+    containing particle-antiparticle pairs from Z<sup>0</sup> decays.
+    Look at each one and keep a separate count of the number of:
+    <img src="{{ url_for('static', filename='graphics/tex_ee.gif') }}">,
+    <img src="{{ url_for('static', filename='graphics/tex_mumu.gif') }}">,
+    <img src="{{ url_for('static', filename='graphics/tex_tautau.gif') }}">
+    and <img src="{{ url_for('static', filename='graphics/tex_qq.gif') }}">
+    events.
+  </p>
+  <p>
+    Before proceding any further you need to multiply the number of
+    <img src="{{ url_for('static', filename='graphics/tex_ee.gif') }}">
+    events you have 
+    found by a factor of 1.6.
+    Don't worry, you don't have to understand where this factor comes
+    from in order to do this challenge.
+    However, <a href="{{ url_for('factor') }}">if you'd like  to know more about this factor
+      click here.</a>
+  </p>
+  <p>
+    Once you have classified all the events there are a number of interesting 
+    questions to ask yourself:
+    <ul>
+      <li>
+	An important prediction of the Standard Model of particle physics is that
+	the probability for a Z<sup>0</sup> to decay to an electron-positron pair 
+	should be the same as the probability for it to decay to a 
+	muon-antimuon pair or a tau-antitau pair. 
+	Are the numbers of:
+	 <img src="{{ url_for('static', filename='graphics/tex_ee.gif') }}"> (corrected),
+	 <img src="{{ url_for('static', filename='graphics/tex_mumu.gif') }}"> 
+	and  <img src="{{ url_for('static', filename='graphics/tex_tautau.gif') }}">
+	events you have counted statistically consistent with one another?
+      </li>
+      <li>
+	Another prediction of the Standard Model is that Z<sup>0</sup>s decay to 
+	quark-antiquark pairs much more frequently than to electron-positron, 
+	muon-antimuon or tau-antitau pairs.
+	In fact, the number of muon-antimuon pairs should be only about 
+	0.048 times the number of quark-antiquark pairs.
+	Using the number of  <img src="{{ url_for('static', filename='graphics/tex_qq.gif') }}">
+	events you have observed, calculate the number of
+	 <img src="{{ url_for('static', filename='graphics/tex_mumu.gif') }}">
+	events you should have expected to see.
+	Is the number of  <img src="{{ url_for('static', filename='graphics/tex_mumu.gif') }}">
+	events you actually observed statistically consistent with the number you
+	expected?
+	What about the number of
+	 <img src="{{ url_for('static', filename='graphics/tex_ee.gif') }}">
+	and  <img src="{{ url_for('static', filename='graphics/tex_tautau.gif') }}">
+	events?
+      </li>
+    </ul>
+  </p>
+  <p>
+    Note: in order to decide whether or not two numbers are 
+    "statistically consistent" you need to have some idea about 
+    "statistical errors" or "statistical uncertainties".
+    <a href="{{ url_for('stat') }}">Here is some help if this is unfamiliar to you.</a>
+  </p>
+  <p>
+    Here are the events.
+    Don't worry if you don't have time to look at them all.
+    You can make measurements even if you look only at a subset.
+    Of course, your measurements will be more accurate the larger the number
+    of events you do look at.
+    Another way might be to collaborate with a few of your friends:  you could 
+    each scan a different set of events and then combine your results.
+  </p>
+  
+  {% for event in events: %}
+  <p>
+    <a href="{{ url_for('static', filename='data/'+event.file_name) }}">
+      <button type="button" class="btn btn-outline-primary">
+	Event {{ event.event_id }}
+      </button>
+    </a>
+  </p>
+  {% endfor %}
+  
+</div>
+{% endblock %}

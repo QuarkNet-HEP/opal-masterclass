@@ -1,0 +1,93 @@
+{% extends "bootstrap/base.html"%}
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+
+  <h1>{{ title }}</h1>
+
+  <p>
+    If you've got this far then 
+    you're probably now an expert at identifying different types of
+    Z<sup>0</sup> and W pair events. Here is a more difficult challenge
+    to keep you on your toes!
+  </p>
+  <p>
+    In the previous challenge you measured the fractions of Z<sup>0</sup>s that
+    decay to each type of particle-antiparticle pair. Another important
+    measurement is measuring the fractions of W pairs that decay into
+    each possible class. Remember these classes are
+  </p>
+  <ul>
+    <li>the four-jet events:
+      <img src="{{ url_for('static', filename='graphics/tex_qqqq.gif') }}">,
+    </li>
+    <li>
+      the two lepton, two neutrino events: 
+      <img src="{{ url_for('static', filename='graphics/tex_lnulnu.gif') }}">
+    </li>
+    <li>
+      or the lepton-neutrino, quark-anti-quark events:
+      <img src="{{ url_for('static', filename='graphics/tex_enuqq.gif') }}">,
+      <img src="{{ url_for('static', filename='graphics/tex_munuqq.gif') }}">,
+      <img src="{{ url_for('static', filename='graphics/tex_taunuqq.gif') }}">.
+    </li>
+  </ul>
+  <p>
+    In this challenge you are asked to look through a list of events and keep 
+    count of the various types of W pair decays. But beware! There are other 
+    types of events, such as Z<sup>0</sup> decays, mixed in as well. 
+    Therefore, for each event you first need to determine whether you're looking at a
+    W pair decay or some other kind of event.
+  </p>
+  <p>
+    One measurement you can make is to count the total number of W pair events
+    (having "thrown away" all the events you didn't think were  W pairs).
+    Count also the number of W pair events in each of the classes listed above.
+    Thus you can 
+    determine the fractions of W pair events that end up in the various 
+    classes.
+  </p>
+  <p>
+    We expect the number of  <img src="{{ url_for('static', filename='graphics/tex_enuqq.gif') }}">,
+    <img src="{{ url_for('static', filename='graphics/tex_munuqq.gif') }}"> and   
+    <img src="{{ url_for('static', filename='graphics/tex_taunuqq.gif') }}"> events each to be 0.29
+    times the number of <img src="{{ url_for('static', filename='graphics/tex_qqqq.gif') }}"> events.
+    We also expect to observe that the total number of
+    <img src="{{ url_for('static', filename='graphics/tex_lnulnu.gif') }}"> events to be 0.18
+    times the number of <img src="{{ url_for('static', filename='graphics/tex_qqqq.gif') }}"> events.
+    Check your measurements are statistically consistent with these values. 
+  </p>
+  <p> 
+    A helpful hint!  In challenge part 5 you looked at some more complicated types of events.
+    Here you will meet some Z<sup>0</sup> decays which involve the production of
+    <a href="{{ url_for('ffgamma') }}">
+      High Energy Photons in Events Containing a
+      Particle-Antiparticle Pair
+    </a>.
+    Where necessary, both the end-on and side views have been given to help you decide
+    which type of decay has occurred.
+  </p>
+  <p> 
+    The events are listed below. 
+    If you're working toghether as
+    a group each of you may like to look at a different set of events and you can
+    then combine your measurements.
+    If you are working on your own, but don't have time to look at all events
+    you can just look at a subset.
+  </p>
+  
+  {% for event in events: %}
+  <p>
+    <a href="{{ url_for('static', filename='data/'+event.file_name) }}">
+      <button type="button" class="btn btn-outline-primary">
+	Event {{ event.event_id }}
+      </button>
+    </a>
+  </p>
+  {% endfor %}
+  
+</div>
+{% endblock %}

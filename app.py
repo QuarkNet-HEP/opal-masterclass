@@ -192,16 +192,30 @@ def W():
 @app.route('/Zdecays')
 def Zdecays():
     return render_template(
-        'events.html',
-        title='Z challenge',
+        'zdecays.html',
+        title='Measuring Z decays',
         events=zevents,
+    )
+
+@app.route('/factor')
+def factor():
+    return render_template(
+        'factor.html',
+        title='Correction Factor for e+e- Events'
+    )
+
+@app.route('/stat')
+def stat():
+    return render_template(
+        'stat.html',
+        title='Some Hints on Statistical Errors'
     )
 
 @app.route('/Wdecays')
 def Wdecays():
     return render_template(
-        'events.html',
-        title='W challenge',
+        'wdecays.html',
+        title='Measuring W decays',
         events=wevents,
     )
 

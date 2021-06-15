@@ -1,0 +1,42 @@
+{% extends "bootstrap/base.html"%}
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <h1>{{ title }}</h1>
+
+  <p>
+    There are many examples of random processes in physics.
+    For example, if we pick a single card out of a pack of 52 cards we don't know 
+    which one we will find.
+    All we can say is that there is a certain probability (one in 52) of getting 
+    a particular card (say, the jack of clubs).
+    If we have 150 packs of cards and pick one card from each, how many
+    jacks of clubs will we pick out?
+    About three times on average. (150 times 1/52 is about equal to 3.)
+    However, sometimes we will get only 2 jacks of clubs, sometimes 4 and sometimes
+    other numbers.
+    This is what we mean by statistical fluctuations.
+  </p>
+  <p>
+    Physicists need to be able to estimate the effect of statistical 
+    fluctuations on the measurements they make.
+    If you have counted a certain number N of a particular type of event then the
+    "statistical error" or "statistical uncertainty" on N is approximately
+    given by the square root of N.
+    So, for example, if you counted 49 
+    <img src="{{ url_for('static', filename='graphics/tex_mumu.gif') }}">
+    events, the statistical uncertainty on your measurement
+    would be the square root of 49, which is 7.
+  </p>
+  
+  <p>
+    <a href="{{url_for('Zdecays') }}">
+      Back
+    </a>
+  </p>
+
+</div>
+{% endblock %}
