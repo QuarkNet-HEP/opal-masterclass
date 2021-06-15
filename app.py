@@ -208,7 +208,7 @@ def Zdecays():
 def factor():
     return render_template(
         'factor.html',
-        title='Correction Factor for e+e- Events'
+        title='Correction Factor for \(e^{+}e^{-}\) Events'
     )
 
 @app.route('/stat')
