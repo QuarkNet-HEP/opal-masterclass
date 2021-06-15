@@ -8,7 +8,7 @@
   <h1>{{ title }}</h1>
 
   <p>
-    The production of a W+W- pair of particles can be 
+    The production of a \(W^{+}W^{-}\) pair of particles can be 
     represented by the following diagrams:
   </p>
   <p>
@@ -19,69 +19,84 @@
   </p>
   
   <p>
-    After about 10<sup>-25</sup> seconds a W decays, so we don't see it 
+    After about 10<sup>-25</sup> seconds a \(W\) decays, so we don't see it 
     directly in our detector. 
-    A W can decay in two different ways.
+    A \(W\) can decay in two different ways.
     The first type of decay produces a lepton and an antineutrino.
-    For example, the following picture shows the W decaying to a muon and a muon
-    antineutrino.
+    For example, the following picture shows the \(W^{-}\) decaying to a muon (\(\mu^{-}\)) and a muon antineutrino (\(\bar{\nu}_{\mu}\)).
   </p>
   <p>
     <img src="{{ url_for('static', filename='graphics/feynman_Wtomu.gif') }}">
   </p>
   <p>
-    In a similar way a W can to decay to produce an electron or a tau lepton.
+    In a similar way a \(W\) can to decay to produce an electron (\(e\)) or a tau lepton (\(\tau\)).
   </p>
   <p>
-    The second type of W decay produces a quark and an antiquark:
+    The second type of \(W\) decay produces a quark and an antiquark:
   </p>
   <p>
     <img src="{{ url_for('static', filename='graphics/feynman_Wtoqq.gif') }}">
   </p>
   <p>
-    Because both the W+ and the W- decay to produce particles
+    Because both the \(W^{+}\) and the \(W^{-}\) decay to produce particles
     we see in the detector, the resulting events are slightly more complicated
     than the particle-antiparticle pair events we looked at in the previous section.
-    We get different types of W+W- event depending on 
-    whether both W+ and W- decay to produce quarks, both
-    decay to produce leptons, or one W decays to produce quarks and one W 
+    We get different types of \(W^{+}W^{-}\) event depending on 
+    whether both \(W^{+}\) and \(W^{-}\) decay to produce quarks, both
+    decay to produce leptons, or one \(W\) decays to produce quarks and one \(W\) 
     decays to produce leptons.
   </p>
 
   <p>
-    Here are some examples of the different types of  
-    W+W- events:
-    <ul>
-      <li>both W+ and W- decay to produce a quark and an antiquark:
-	<ul>
-	  <a href="{{ url_for('qqqq') }}">example 
-	    <img src="{{ url_for('static', filename='graphics/tex_qqqq.gif') }}">
-	    events
-	  </a>
-	</ul> 
-      <li>both W+ and W- decay to produce a charged lepton and a neutrino:
-	<ul>
-	  <a href="{{ url_for('lnulnu') }}">example 
-	    <img src="{{ url_for('static', filename='graphics/tex_lnulnu.gif') }}">
-	    event
-	  </a>
-	</ul> 
-      <li>one W decays to produce a charged lepton
-	and a neutrino, and the other W 
-	decays to produce a quark
-	and an antiquark:
-	<ul>
-	  <li><a href="{{ url_for('enuqq') }}">example 
-	      <img src="{{ url_for('static', filename='graphics/tex_enuqq.gif') }}">
-	      event</a>
-	  <li><a href="{{ url_for('munuqq') }}">example 
-	      <img src="{{ url_for('static', filename='graphics/tex_munuqq.gif') }}">
-	      event</a>
-	  <li><a href="{{ url_for('taunuqq') }}">example 
-	      <img src="{{ url_for('static', filename='graphics/tex_taunuqq.gif') }}">
-	      event</a>
-	</ul> 
-    </ul> 
+    Below are some examples of the different types of  
+    \(W^{+}W^{-}\) events.
+  </p>
+  <p>
+    Both \(W^{+}\) and \(W^{-}\) decay to produce a quark and an antiquark:
+  </p>
+  <p>
+    <a href="{{ url_for('qqqq') }}">
+      <button type="button" class="btn btn-outline-primary">
+	\(W^{+}W^{-} \rightarrow q\bar{q}q\bar{q}\)
+      </button>
+    </a>
+  </p>
+  <p>
+    Both \(W^{+}\) and \(W^{-}\) decay to produce a charged lepton and a neutrino:
+  </p>
+  <p>
+    <a href="{{ url_for('lnulnu') }}">
+      <button type="button" class="btn btn-outline-primary">
+	\(W^{+}W^{-} \rightarrow l^{+}\nu l^{-}\bar{\nu}\)
+      </button>
+    </a>
+  </p>
+  <p>
+    One \(W\) decays to produce a charged lepton
+    and a neutrino, and the other \(W\) 
+    decays to produce a quark
+    and an antiquark:
+  </p>
+  <p>
+    <a href="{{ url_for('enuqq') }}">
+      <button type="button" class="btn btn-outline-primary">
+	\(W^{+}W^{-} \rightarrow e\bar{\nu} q\bar{q} \)
+      </button>
+    </a>
+  </p>
+  <p>
+    <a href="{{ url_for('munuqq') }}">
+      <button type="button" class="btn btn-outline-primary">
+	\(W^{+}W^{-} \rightarrow \mu\bar{\nu} q\bar{q} \)
+      </button>
+    </a>
+  </p>
+  <p>
+    <a href="{{ url_for('taunuqq') }}">
+      <button type="button" class="btn btn-outline-primary">
+	\(W^{+}W^{-} \rightarrow \tau\bar{\nu} q\bar{q} \)
+      </button>
+    </a>
   </p>
 
   <p>

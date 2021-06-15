@@ -9,13 +9,13 @@
 
   <p>
     Perhaps the simplest types of events to identify are those in which the 
-    electron and positron annihilate to produce a Z
+    electron and positron annihilate to produce a \(Z^{0}\)
     that then decays to
     produce a particle-antiparticle pair.
     The particle and antiparticle then fly off back to back and are observed in
     the detector.
     We represent the production of, for example, a muon-antimuon pair in 
-    Z decay by means of the following diagram:
+    \(Z^{0}\) decay by means of the following diagram:
   <p>
 
   <p>
@@ -25,34 +25,35 @@
   <p>
     Here are some events containing the different types of 
     particle-antiparticle pairs, with hints on how to identify them:
-    <ul>
-      <li>
-	<a href="{{ url_for('mumu') }} ">
-	  Example
-	  <img src="{{ url_for('static', filename='graphics/tex_mumu.gif') }}">
-	  events
-	</a>
-      <li>
-	<a href="{{ url_for('ee') }} ">
-	  Example
-	  <img src="{{ url_for('static', filename='graphics/tex_ee.gif') }}">
-	  events
-	</a>
-      <li>
-	<a href="{{ url_for('tautau') }} ">
-	  Example
-	  <img src="{{ url_for('static', filename='graphics/tex_tautau.gif') }}">
-	  events
-	</a>
-      <li>
-	<a href="{{ url_for('qq') }} ">
-	  Example  
-	  <img src="{{ url_for('static', filename='graphics/tex_qq.gif') }}">
-	  events
-	</a>
-    </ul> 
   </p>
-
+  <p>
+    <a href="{{ url_for('mumu') }} ">
+      <button type="button" class="btn btn-outline-primary">
+	\(e^{+}e^{-} \rightarrow \mu^{+}\mu^{-}\)
+      </button>
+    </a>
+  </p>
+  <p>
+    <a href="{{ url_for('ee') }} ">
+      <button type="button" class="btn btn-outline-primary">
+	\(e^{+}e^{-} \rightarrow e^{+}e^{-}\)
+      </button>
+    </a>
+  </p>
+  <p>
+    <a href="{{ url_for('tautau') }} ">
+       <button type="button" class="btn btn-outline-primary">
+	 \(e^{+}e^{-} \rightarrow \tau^{+}\tau^{-}\)
+       </button>
+    </a>
+  <p>
+    <a href="{{ url_for('qq') }} ">
+       <button type="button" class="btn btn-outline-primary">
+	 \(e^{+}e^{-} \rightarrow q\bar{q}\)
+       </button>
+    </a>
+  </p> 
+  
   <p>
     Once you've understood the way we identify  the different
     types of events, then please proceed to the
