@@ -79,7 +79,7 @@
   
   {% for event in events: %}
   <p>
-    <a href="{{ url_for('static', filename='data/'+event.file_name) }}">
+    <a href="{{ url_for('wevent', id=event.event_id) }}">
       <button type="button" class="btn btn-outline-primary">
 	Event {{ event.event_id }}
       </button>

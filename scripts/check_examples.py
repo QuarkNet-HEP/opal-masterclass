@@ -2,7 +2,7 @@ import csv
 import os
 
 base_dir = os.path.abspath('../')
-data_dir = os.path.join(base_dir, 'app', 'static', 'data')
+data_dir = os.path.join(base_dir, 'static', 'data')
 
 with open('./examples.csv', 'r') as csv_data:
 

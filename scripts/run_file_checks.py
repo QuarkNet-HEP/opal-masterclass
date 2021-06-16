@@ -13,8 +13,8 @@ Z and W challenges.
 '''
 
 base_dir = path.abspath('../')
-csv_dir = path.join(base_dir, 'app', 'data')
-data_dir = path.join(base_dir, 'app', 'static', 'data')
+csv_dir = path.join(base_dir, 'data')
+data_dir = path.join(base_dir, 'static', 'data')
 
 checks_log = open('checks_log.txt', 'w')
 

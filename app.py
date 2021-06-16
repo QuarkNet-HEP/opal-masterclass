@@ -204,6 +204,40 @@ def Zdecays():
         events=zevents,
     )
 
+@app.route('/Wdecays')
+def Wdecays():
+    return render_template(
+        'wdecays.html',
+        title='Measuring W decays',
+        events=wevents,
+    )
+
+@app.route('/Zdecays/<id>')
+def zevent(id):
+    return render_template(
+        'event.html',
+        title=f'Z Measurement: Event {id}',
+        nevents=1000, # There are duplicates in Z dataset. Investigate.
+        dataset='zevent',
+        measurement='Zdecays',
+        back_id=int(id)-1,
+        next_id=int(id)+1,
+        event=list(filter(lambda e: e["event_id"] == id, zevents))[0]
+    )
+
+@app.route('/Wdecays/<id>')
+def wevent(id):    
+    return render_template(
+        'event.html',
+        title=f'W Measurement: Event {id}',
+        nevents=479, # There are duplicates in the W dataset (end and side views).
+        dataset='wevent',
+        measurement='Wdecays',
+        back_id=int(id)-1,
+        next_id=int(id)+1,
+        event=list(filter(lambda e: e["event_id"] == id, wevents))[0]
+    )
+
 @app.route('/factor')
 def factor():
     return render_template(
@@ -217,14 +251,6 @@ def stat():
     return render_template(
         'stat.html',
         title='Some Hints on Statistical Errors'
-    )
-
-@app.route('/Wdecays')
-def Wdecays():
-    return render_template(
-        'wdecays.html',
-        title='Measuring W decays',
-        events=wevents,
     )
 
 @app.route('/Z/mumu')
