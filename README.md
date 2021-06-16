@@ -61,3 +61,14 @@ Identify 8 events from all types seen up to now
 * [physicsmasterclasses.org version](https://www.physicsmasterclasses.org/exercises/manchester/en/)
 
 * [Original authors](http://www.hep.man.ac.uk/u/events/acknowledgements.html)
+
+## Test
+
+ If you want to run this locally (in a python 3 environment):
+ ```
+ git clone git@github.com:QuarkNet-HEP/opal-masterclass.git
+ cd opal-masterclass
+ pip install -r requirements.txt
+ flask run
+ ```
+Then go to `http://127.0.0.1:5000/` in your browser.
