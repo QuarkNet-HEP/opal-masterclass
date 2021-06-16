@@ -208,7 +208,8 @@ def Zdecays():
 def factor():
     return render_template(
         'factor.html',
-        title='Correction Factor for \(e^{+}e^{-}\) Events'
+        title='Correction Factor for e+e- Events',
+        header='Correction Factor for \(e^{+}e^{-}\) Events'
     )
 
 @app.route('/stat')
@@ -230,63 +231,72 @@ def Wdecays():
 def mumu():
     return render_template(
         'mumu.html',
-        title='Example \(\mu^{+}\mu^{-}\) events'
+        title='Example mu+mu- Events',
+        header='Example \(\mu^{+}\mu^{-}\) Events'
     )
 
 @app.route('/Z/ee')
 def ee():
     return render_template(
         'ee.html',
-        title='Example \(e^{+}e^{-}\) events'
+        title='Example e+e- Events',
+        header='Example \(e^{+}e^{-}\) Events'
     )
     
 @app.route('/Z/tautau')
 def tautau():
     return render_template(
         'tautau.html',
-        title='Example \(\\tau^{+}\\tau^{-}\) events'
+        title='Example tau+tau- Events',
+        header='Example \(\\tau^{+}\\tau^{-}\) Events'
     )
     
 @app.route('/Z/qq')
 def qq():
     return render_template(
         'qq.html',
-        title='Example \(q\\bar{q}\) events'
+        title='Example qq Events',
+        header='Example \(q\\bar{q}\) Events'
     )
 
 @app.route('/W/qqqq')
 def qqqq():
     return render_template(
         'qqqq.html',
-        title='Example \(q\\bar{q}q\\bar{q}\) event'
+        title='Example qqqq Events',
+        header='Example \(q\\bar{q}q\\bar{q}\) Events'
     )
 
 @app.route('/W/lnulnu')
 def lnulnu():
     return render_template(
         'lnulnu.html',
-        title='Example \(l^{+}\\nu l^{-}\\bar{\\nu}\) event'
+        title='Example lnulnu Events',
+        header='Example \(l^{+}\\nu l^{-}\\bar{\\nu}\) Events'
     )
 
 @app.route('/W/enuqq')
 def enuqq():
     return render_template(
         'enuqq.html',
-        title='Example \(e\\bar{\\nu} q\\bar{q} \) event'
+        title='Example enuqq Events',
+        header='Example \(e\\bar{\\nu} q\\bar{q} \) Events'
     )
 
 @app.route('/W/munuqq')
 def munuqq():
     return render_template(
         'munuqq.html',
-        title='Example \(\mu\\bar{\\nu} q\\bar{q} \) event'
+        title='Example munuqq Events',
+        header='Example \(\mu\\bar{\\nu} q\\bar{q} \) Events'
     )
 
 @app.route('/W/taunuqq')
 def taunuqq():
     return render_template(
         'taunuqq.html',
-        title='Example \(\\tau\\bar{\\nu} q\\bar{q} \) event'
+        title='Example taunuqq Events',
+        header='Example \(\\tau\\bar{\\nu} q\\bar{q} \) Events'
     )
 
 @app.route('/others/ffgamma')
