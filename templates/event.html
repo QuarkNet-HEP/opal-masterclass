@@ -5,34 +5,37 @@
 
 {% block content %}
 <div class="container">
-<h1>{{ title }}</h1>
+  <div class="text-center">
+    <h2>{{ title }}</h2>
 
-<p>
-  <img class="img-thumbnail" src="{{ url_for('static', filename='data/'+event.file_name) }}" title="{{ event.event_id }}">
-</p>
+    <ul class="pager">
+      {% if back_id >= 1 %}
+      <li class="previous">
+	<a href="{{ url_for(dataset, id=back_id) }}">
+	  Previous
+	</a>
+      </li>
+      {% endif %}
+      <li>
+	<img class="img-thumbnail" src="{{ url_for('static', filename='data/'+event.file_name) }}" title="{{ event.event_id }}">
+      </li>
+      {% if next_id <= nevents %}
+      <li class="next">
+	<a href="{{ url_for(dataset, id=next_id) }}">
+	  Next
+	</a>
+      </li>
+      {% endif %}
+    </ul> 
 
-<p>
-  {% if back_id >= 1 %}
-  <a href="{{ url_for(dataset, id=back_id) }}">
-    <button type="button" class="btn btn-outline-primary">
-      Back
-    </button>
-  </a>
-  {% endif %}
-  {% if next_id <= nevents %}
-  <a href="{{ url_for(dataset, id=next_id) }}">
-    <button type="button" class="btn btn-outline-primary">
-      Next
-    </button>
-  </a>
-  {% endif %}
-</p>
-
-<p>
-  <a href="{{ url_for(measurement) }}">
-    Back to event list
-  </a>
-</p>
-
+    <p>
+      <a href="{{ url_for(measurement) }}">
+	<button type="button" class="btn btn-outline-primary">
+	  Back to event list
+	</button>
+      </a>
+    </p>
+    
+  </div>
 </div>
 {% endblock %}

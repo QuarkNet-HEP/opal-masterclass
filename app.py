@@ -108,6 +108,11 @@ def ch1(id):
     return render_template(
         'side_end.html',
         title=f'Challenge 1: Event {id}',
+        ch='ch1',
+        challenge='challenge1',
+        nevents=len(challenge1_events)+1,
+        back_id=int(id)-1,
+        next_id=int(id)+1,
         event=list(filter(lambda e: e["id"] == int(id), challenge1_events))[0]
     )
 
@@ -124,6 +129,11 @@ def ch2(id):
     return render_template(
         'side_end.html',
         title=f'Challenge 2: Event {id}',
+        ch='ch2',
+        challenge='challenge2',
+        nevents=len(challenge2_events)+1,
+        back_id=int(id)-1,
+        next_id=int(id)+1,
         event=list(filter(lambda e: e["id"] == int(id), challenge2_events))[0]
     )
 
@@ -140,6 +150,11 @@ def ch3(id):
     return render_template(
         'side_end.html',
         title=f'Challenge 3: Event {id}',
+        ch='ch3',
+        challenge='challenge3',
+        nevents=len(challenge3_events)+1,
+        back_id=int(id)-1,
+        next_id=int(id)+1,
         event=list(filter(lambda e: e["id"] == int(id), challenge3_events))[0]
     )
 
@@ -156,6 +171,11 @@ def ch4(id):
     return render_template(
         'side_end.html',
         title=f'Challenge 4: Event {id}',
+        ch='ch4',
+        challenge='challenge4',
+        nevents=len(challenge4_events)+1,
+        back_id=int(id)-1,
+        next_id=int(id)+1,
         event=list(filter(lambda e: e["id"] == int(id), challenge4_events))[0]
     )
 
@@ -172,6 +192,11 @@ def ch5(id):
     return render_template(
         'side_end.html',
         title=f'Challenge 5: Event {id}',
+        ch='ch5',
+        challenge='challenge5',
+        nevents=len(challenge5_events)+1,
+        back_id=int(id)-1,
+        next_id=int(id)+1,
         event=list(filter(lambda e: e["id"] == int(id), challenge5_events))[0]
     )
 
