@@ -8,6 +8,11 @@
   <div class="text-center">
     <h2>{{ title }}</h2>
 
+    <p>
+	<img class="img-thumbnail" src="{{ url_for('static', filename='data/'+event.file_name) }}" title="{{ event.event_id }}">
+    </p>
+
+    <p>
     <ul class="pager">
       {% if back_id >= 1 %}
       <li class="previous">
@@ -16,9 +21,6 @@
 	</a>
       </li>
       {% endif %}
-      <li>
-	<img class="img-thumbnail" src="{{ url_for('static', filename='data/'+event.file_name) }}" title="{{ event.event_id }}">
-      </li>
       {% if next_id <= nevents %}
       <li class="next">
 	<a href="{{ url_for(dataset, id=next_id) }}">
@@ -27,7 +29,8 @@
       </li>
       {% endif %}
     </ul> 
-
+    </p>
+    
     <p>
       <a href="{{ url_for(measurement) }}">
 	<button type="button" class="btn btn-outline-primary">
