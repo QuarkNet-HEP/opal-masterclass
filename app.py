@@ -113,6 +113,7 @@ def ch1(id):
         nevents=len(challenge1_events)+1,
         back_id=int(id)-1,
         next_id=int(id)+1,
+        options=['electron', 'muon', 'hadron'],
         event=list(filter(lambda e: e["id"] == int(id), challenge1_events))[0]
     )
 
@@ -134,6 +135,7 @@ def ch2(id):
         nevents=len(challenge2_events)+1,
         back_id=int(id)-1,
         next_id=int(id)+1,
+        options=['ee', 'mumu', 'tautau', 'qq'],
         event=list(filter(lambda e: e["id"] == int(id), challenge2_events))[0]
     )
 
@@ -155,6 +157,7 @@ def ch3(id):
         nevents=len(challenge3_events)+1,
         back_id=int(id)-1,
         next_id=int(id)+1,
+        options=['enuqq', 'munuqq', 'taunuqq', 'qqqq', 'lnulnu'],
         event=list(filter(lambda e: e["id"] == int(id), challenge3_events))[0]
     )
 
@@ -176,6 +179,10 @@ def ch4(id):
         nevents=len(challenge4_events)+1,
         back_id=int(id)-1,
         next_id=int(id)+1,
+        options=[
+            'ee', 'mumu', 'tautau', 'qq',
+            'enuqq', 'munuqq', 'taunuqq', 'qqqq', 'lnulnu'
+        ],
         event=list(filter(lambda e: e["id"] == int(id), challenge4_events))[0]
     )
 
@@ -197,6 +204,11 @@ def ch5(id):
         nevents=len(challenge5_events)+1,
         back_id=int(id)-1,
         next_id=int(id)+1,
+        options=[
+            'ee', 'mumu', 'tautau', 'qq',
+            'enuqq', 'munuqq', 'taunuqq', 'qqqq', 'lnulnu',
+            'ffgamma', 'qqg', 'ffff'
+        ],
         event=list(filter(lambda e: e["id"] == int(id), challenge5_events))[0]
     )
 
