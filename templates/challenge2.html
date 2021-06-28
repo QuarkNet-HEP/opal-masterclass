@@ -25,20 +25,19 @@
 {% endfor %}
 </p>
 
-<p>
-  Once you've successfully identified each of these events,
-  then please proceed to the
-  <a href="{{ url_for('W') }}">next part of the programme</a>,
-  where you will learn how to identify events in which a 
-  \(W^{+}W^{-}\) pair has been produced.
-</p>
+<ul class="pager">
+  <li class="next">
+    <a href="{{ url_for('W') }}">
+      Next: W Events
+    </a>
+  </li>
+  <li class="previous">
+    <a href="{{ url_for('Z') }}">
+      Back: Z Events
+    </a>
+  </li>
+</ul>
 
-<p>
-  <a href="{{ url_for('W') }}">Next</a>
-</p>
-<p>
-  <a href="{{ url_for('contents') }}">Back to start</a>
-</p>
 </div>
 {% endblock %}
 

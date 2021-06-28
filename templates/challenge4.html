@@ -5,48 +5,47 @@
 
 {% block content %}
 <div class="container">
-<h1>{{ title }}</h1>
+  <h1>{{ title }}</h1>
 
-<p>    
-  Part 4 of the challenge is a little bit more difficult.
-  Events of the types you met in Parts 2 and 3 will be mixed up together.
-  We won't tell you in advance which is which.
+  <p>    
+    Part 4 of the challenge is a little bit more difficult.
+    Events of the types you met in Parts 2 and 3 will be mixed up together.
+    We won't tell you in advance which is which.
+    
+    So, first you have to decide whether the event you're looking at is the 
+    type in which a particle-antiparticle pair has been produced (like Challenge 
+    Part 2)
+    or it is the type of event in which
+    a \(W^{+}W^{-}\) pair has been produced (like Challenge Part 3).
   
-  So, first you have to decide whether the event you're looking at is the 
-  type in which a particle-antiparticle pair has been produced (like Challenge 
-  Part 2)
-  or it is the type of event in which
-  a \(W^{+}W^{-}\) pair has been produced (like Challenge Part 3).
-  
-  After you've done that then see if you can identify exactly which sort of 
-  event you're looking at!
-</p>
+    After you've done that then see if you can identify exactly which sort of 
+    event you're looking at!
+  </p>
 
-<p>
-  {% for e in events: %}
   <p>
-  <a href="{{ url_for('ch4', id=e.id) }}">
-     <button type="button" class="btn btn-outline-primary">
-       Event {{ e['id'] }}
-     </button>
-  </a>
+    {% for e in events: %}
+  <p>
+    <a href="{{ url_for('ch4', id=e.id) }}">
+      <button type="button" class="btn btn-outline-primary">
+	Event {{ e['id'] }}
+      </button>
+    </a>
   </p>
   {% endfor %}
-</p>
+  </p>
     
-<p>
-  Once you've successfully identified each of these events,
-  then please proceed to the
-  <a href="{{ url_for('others') }}">next part of the programme</a>
-  where you will learn how to identify some slightly more complicated 
-  types of "Standard Model" events.
-</p>
-
-<p>
-  <a href="{{ url_for('others') }}">Next</a>
-</p>
-<p>
-  <a href="{{ url_for('contents') }}">Back to start</a>
-</p>
+  <ul class="pager">
+    <li class="next">
+      <a href="{{ url_for('others') }}">
+	Next: Other Events
+      </a>
+    </li>
+    <li class="previous">
+      <a href="{{ url_for('challenge3') }}">
+	Back: Challenge 3
+      </a>
+    </li>
+  </ul>
+  
 </div>
 {% endblock %}

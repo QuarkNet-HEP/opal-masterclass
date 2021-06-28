@@ -5,36 +5,37 @@
 
 {% block content %}
 <div class="container">
-<h1>{{ title }}</h1>
+  <h1>{{ title }}</h1>
 
-<p>
-  This is the most difficult of all the challenge sections.
-  You will meet events of all the different types you have seen up till now.
-</p>
+  <p>
+    This is the most difficult of all the challenge sections.
+    You will meet events of all the different types you have seen up till now.
+  </p>
 
-<p>
-{% for e in events: %}
-<p>
-<a href="{{ url_for('ch5', id=e.id) }}">
-   <button type="button" class="btn btn-outline-primary">
-     Event {{ e['id'] }}
-   </button>
-</a>
-</p>
-{% endfor %}
-</p>
-
-<p>
-  Once you've successfully identified each of these events,
-  then please proceed to the
-  <a href="{{ url_for('Zdecays') }}">next part of the programme</a>.
-</p>
-
-<p>
-  <a href="{{ url_for('Zdecays') }}">Next</a>
-</p>
-<p>
-  <a href="{{ url_for('contents') }}">Back to start</a>
-</p>
+  <p>
+    {% for e in events: %}
+  <p>
+    <a href="{{ url_for('ch5', id=e.id) }}">
+      <button type="button" class="btn btn-outline-primary">
+	Event {{ e['id'] }}
+      </button>
+    </a>
+  </p>
+  {% endfor %}
+  </p>
+  
+  <ul class="pager">
+    <li class="next">
+      <a href="{{ url_for('Zdecays') }}">
+	Next: Z Measurement
+      </a>
+    </li>
+    <li class="previous">
+      <a href="{{ url_for('others') }}">
+     	Back: Other Events
+      </a>
+    </li>
+  </ul>
+  
 </div>
 {% endblock %}

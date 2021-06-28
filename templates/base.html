@@ -6,3 +6,39 @@
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 {% endblock %}
+
+{% block navbar %}
+<div class="navbar navbar-inverse" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle"
+	      data-togle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">OPAL Masterclass</a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+	<li><a href="/contents">Contents</a></li>
+	<!--
+	<li><a href="/intro">Introduction</a></li>
+	<li><a href="/detector">Detector</a></li>
+	<li><a href="/challenge1">Challenge 1</a></li>
+	<li><a href="/Z">Z Events</a></li>
+	<li><a href="/challenge2">Challenge 2</a></li>
+	<li><a href="/W">W Events</a></li>
+	<li><a href="/challenge3">Challenge 3</a></li>
+	<li><a href="/challenge4">Challenge 4</a></li>
+	<li><a href="/others">Other Events</a></li>
+	<li><a href="/challenge5">Challenge 5</a></li>
+	-->
+	<li><a href="/Zdecays">Z Measurement</a></li>
+	<li><a href="/Wdecays">W Measurement</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+{% endblock %}

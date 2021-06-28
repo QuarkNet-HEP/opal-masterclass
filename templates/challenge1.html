@@ -6,38 +6,36 @@
 {% block content %}
 <div class="container">
 
-<h1>{{ title }}</h1>
+  <h1>{{ title }}</h1>
 
-<p>
-  See if you can identify which sort of particle is present in the following event pictures!
-</p>
+  <p>
+    See if you can identify which sort of particle is present in the following event pictures!
+  </p>
 
-<p>
-{% for e in events: %}
-<p>
-<a href="{{ url_for('ch1', id=e.id) }}">
-  <button type="button" class="btn btn-outline-primary">
-    Event {{ e['id'] }}
-  </button>
-</a>
-</p>
-{% endfor %}
-</p>
+  <p>
+    {% for e in events: %}
+  <p>
+    <a href="{{ url_for('ch1', id=e.id) }}">
+      <button type="button" class="btn btn-outline-primary">
+	Event {{ e['id'] }}
+      </button>
+    </a>
+  </p>
+  {% endfor %}
+  </p>
 
-<p>
-  Once you've successfully identified each of these particles,
-  then please  proceed to the
-  <a href="{{ url_for('Z') }}">next part of the programme</a>,
-  where you will learn how to identify some simple types of 
-  "Standard Model" events.
-</p>
-
-<p>
-  <a href="{{ url_for('Z') }}">Next</a>
-</p>
-<p>
-  <a href="{{ url_for('contents') }}">Back to start</a>
-</p>
+  <ul class="pager">
+    <li class="next">
+      <a href="{{ url_for('Z') }}">
+	Next: Z Events
+      </a>
+    </li>
+    <li class="previous">
+      <a href="{{ url_for('detector') }}">
+	Back: The Detector
+      </a>
+    </li>
+  </ul>
 
 </div>
 {% endblock %}

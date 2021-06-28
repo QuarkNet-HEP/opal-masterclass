@@ -5,67 +5,74 @@
 
 {% block content %}
 <div class="container">
-<h1>{{ title }}</h1>
+  <h1>{{ title }}</h1>
 
-<p>
-  Photons are particles of electromagnetic radiation.
-  They do not carry any electric charge and therefore do not produce a track in
-  the central part of our detector.
-  However, they do carry energy. 
-  The energy of a photon is completely absorbed by the electromagnetic 
-  calorimeter.
-  (Therefore, no energy is seen in the hadronic calorimeter.)
-</p>
-<p>
-<p>
-  Here is an example event containing a high energy photon:
-</p>
-
-<p>
-  <img class="img-thumbnail" src="{{ url_for('static', filename='data/x7614_37594.gif') }}">
-  <img class="img-thumbnail" src="{{ url_for('static', filename='data/s7614_37594.gif') }}">
-</p>
-
-<p>
-  We can represent such an event by means of simple diagrams.<BR>
-  The first diagram shows a photon being radiated one of the outgoing muons:
-  <img src="{{ url_for('static', filename='graphics/mmp_f.gif') }}">
-  The second diagram shows a photon being radiated one of the incoming electrons:
-  <img src="{{ url_for('static', filename='graphics/mmp2_f.gif') }}">
-</p>
-<p>
-  We will refer to such events as:
-  \(e^{+}e^{-} \rightarrow l^{+}l^{-}\gamma\)
-</p>
-
-<p>
-  Here is an example quark-antiquark event containing a high energy photon, 
-  which we represent by the following diagrams:
-</p>
-<p>
-  <img src="{{ url_for('static', filename='graphics/qqp1_f.gif') }}">
-  <img src="{{ url_for('static', filename='graphics/qqp2_f.gif') }}">
-</p>
-<p>
-  We will refer to such events as:
-  \(e^{+}e^{-} \rightarrow q\bar{q}\gamma\)
-</p>
-
-<p>
-  <img class="img-thumbnail" src="{{ url_for('static', filename='data/x7575_31138.gif') }}">
-  <img class="img-thumbnail" src="{{ url_for('static', filename='data/s7575_31138.gif') }}">
-</p>								  
-
-<p>
-  <a href="{{ url_for('qqg') }}">
-    Next</a> take a look at some high energy gluons in events containing a
-  quark-antiquark pair.
-</p>
+  <p>
+    Photons are particles of electromagnetic radiation.
+    They do not carry any electric charge and therefore do not produce a track in
+    the central part of our detector.
+    However, they do carry energy. 
+    The energy of a photon is completely absorbed by the electromagnetic 
+    calorimeter.
+    (Therefore, no energy is seen in the hadronic calorimeter.)
+  </p>
   
-<p>
-  <a href="{{ url_for('others') }}">
-    Back</a> to general section on "How to Identify Some Slightly More Complicated 
-  Types of Event".
-</p>
+  <p>
+    Here is an example event containing a high energy photon:
+  </p>
+
+  <p>
+    <img class="img-thumbnail" src="{{ url_for('static', filename='data/x7614_37594.gif') }}">
+    <img class="img-thumbnail" src="{{ url_for('static', filename='data/s7614_37594.gif') }}">
+  </p>
+
+  <p>
+    We can represent such an event by means of simple diagrams.<BR>
+    The first diagram shows a photon being radiated one of the outgoing muons:
+    <img src="{{ url_for('static', filename='graphics/mmp_f.gif') }}">
+    The second diagram shows a photon being radiated one of the incoming electrons:
+    <img src="{{ url_for('static', filename='graphics/mmp2_f.gif') }}">
+  </p>
+  
+  <p>
+    We will refer to such events as:
+    \(e^{+}e^{-} \rightarrow l^{+}l^{-}\gamma\)
+  </p>
+
+  <p>
+    Here is an example quark-antiquark event containing a high energy photon, 
+    which we represent by the following diagrams:
+  </p>
+  
+  <p>
+    <img src="{{ url_for('static', filename='graphics/qqp1_f.gif') }}">
+    <img src="{{ url_for('static', filename='graphics/qqp2_f.gif') }}">
+  </p>
+  
+  <p>
+    We will refer to such events as:
+    \(e^{+}e^{-} \rightarrow q\bar{q}\gamma\)
+  </p>
+
+  <p>
+    <img class="img-thumbnail" src="{{ url_for('static', filename='data/x7575_31138.gif') }}">
+    <img class="img-thumbnail" src="{{ url_for('static', filename='data/s7575_31138.gif') }}">
+  </p>								  
+
+  <ul class="pager">
+    <li class="next">
+      <a href="{{ url_for('qqg') }}">
+	Next: Take a look at some high energy gluons in events containing a
+	quark-antiquark pair.
+      </a>
+    </li>
+    <li class="previous">
+      <a href="{{ url_for('others') }}">
+	Back: "How to Identify Some Slightly More Complicated 
+	Types of Event"
+      </a>
+    </li>
+  </ul>
+  
 </div>  
 {% endblock %}

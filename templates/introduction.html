@@ -8,10 +8,100 @@
   <h1>{{ title }}</h1>
 
   <p>
-    <a href="{{ url_for('detector') }}">Next: The Detector and How to Understand the Event Pictures</a>
+    The world's largest accelerator of electrons and positrons lived in a
+    tunnel that 27 
+    kilometers long and about 100 metres underground just outside Geneva in
+    Switzerland.
+    The purpose of these web pages is to allow you to identify for yourself 
+    some of the interesting events we have seen at this accelerator.
+  </p>
+  
+  <p>
+    A simple example of the kind of collisions we study is shown schematically 
+    in the following picture:
+  </p>
+  
+  <p>
+    <img src="{{ url_for('static', filename='graphics/picture.gif') }}">
+  </p>
+
+  <p>
+    This picture shows an electron (e<sup>-</sup>) and a positron (e<sup>+</sup>).
+    A positron is the antimatter equivalent (or antiparticle) of an electron. 
+    In the accelerator beams of electrons and postrons fly towards 
+    one another at high energy.
+    In the picture an e<sup>-</sup> and an e<sup>+</sup> collide 
+    to produce a Z<sup>0</sup> particle.
+    Because the initial e<sup>-</sup> and e<sup>+</sup> have momenta which are
+    opposite in direction and equal in magnitude
+    the  Z<sup>0</sup> has no net momentum and is, therefore, stationary.
+    After a very short time (about 10<sup>-25</sup> seconds) the  Z<sup>0</sup>
+    decays to produce
+    a muon (&#181;<sup>-</sup>) and an antimuon (&#181;<sup>+</sup>).
+    The muon and antimuon then fly apart "back to back" with one another.
+  </p>
+  
+  <p>
+    We surround the place where the Z<sup>0</sup> is produced with  
+    detectors, which enable us to see the particles produced when it decays.
+  </p>
+  
+  <p>  
+    We group the different sorts of elementary particles into families.
+    The first family we call the "leptons":
   </p>
   <p>
-    <a href="{{ url_for('contents') }}">Back to start</a>
+    <img src="{{ url_for('static', filename='graphics/l_list.gif') }}">
   </p>
+
+  <p>
+    In addition to the electron and muon, that we have met above, a third member
+    of this family also carries an electric charge; this particle is 
+    called the "tau".
+    Each of these three particles has a partner called a "neutrino".
+    Neutrinos carry no electric charge and can travel large distances through 
+    matter without interacting.
+    They leave no tracks in our detector although sometimes we can deduce that a 
+    neutrino was produced.  
+    (You'll see how later on!)
+  </p>
+
+  <p>
+    The second family of elementary particles we call the "quarks":
+  </p>
+  <p>
+    <img  src="{{ url_for('static', filename='graphics/q_list.gif') }}">
+  </p>
+
+  <p>
+    The "up" and the "down" quark can be found inside protons and neutrons
+    (which themselves can be found inside atomic nuclei).
+    The heavier quarks can be made at particle accelerators or by the interactions
+    of cosmic rays in the upper atmosphere, but don't occur naturally on earth. 
+  </p>
+
+  <p>
+    In the following sections,
+    first we explain a little bit about the detectors we use to see
+    the diferent kinds of particles as they travel through our experiment.
+    Then, in several stages, we explain how to identify the different kinds of 
+    particle interactions or "events" 
+    that can occur (with some helpful examples to get you started).
+    At each stage of the story we give you the challenge of playing particle detective yourself!
+  </p>
+  
+  <ul class="pager">
+    <li class="next">
+      <a href="{{ url_for('detector') }}">
+	Next: The Detector
+      </a>
+    </li>
+    <li class="previous">
+      <a href="{{ url_for('contents') }}">
+	Back: Contents
+      </a>
+    </li>
+  </ul>
+  
 </div>
 {% endblock %}

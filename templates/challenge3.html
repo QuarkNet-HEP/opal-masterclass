@@ -5,37 +5,38 @@
 
 {% block content %}
 <div class="container">
-<h1>{{ title }}</h1>
+  <h1>{{ title }}</h1>
 
-<p>
-  In the following events a \(W^{+}W^{-}\) pair has been produced.
-  See if you can identify which sort of particles were produced when the \(W\)'s
-  subsequently decayed!
-</p>
+  <p>
+    In the following events a \(W^{+}W^{-}\) pair has been produced.
+    See if you can identify which sort of particles were produced when the \(W\)'s
+    subsequently decayed!
+  </p>
 
-<p>
-{% for e in events: %}
-<p>
-<a href="{{ url_for('ch3', id=e.id) }}">
-  <button type="button" class="btn btn-outline-primary">
-    Event {{ e['id'] }}
-  </button>
-</a>
-</p>
-{% endfor %}
-</p>
+  <p>
+    {% for e in events: %}
+  <p>
+    <a href="{{ url_for('ch3', id=e.id) }}">
+      <button type="button" class="btn btn-outline-primary">
+	Event {{ e['id'] }}
+      </button>
+    </a>
+  </p>
+  {% endfor %}
+  </p>
 
-<p>
-  Once you've successfully identified each of these events,
-  then please proceed to the
-  <a href="{{ url_for('challenge4') }}">next part of the programme</a>.
-</p>
-
-<p>
-  <a href="{{ url_for('challenge4') }}">Next</a>
-</p>
-<p>
-  <a href="{{ url_for('contents') }}">Back to start</a>
-</p>
+  <ul class="pager">
+    <li class="next">
+      <a href="{{ url_for('challenge4') }}">
+	Next: Challenge 4
+      </a>
+    </li>
+    <li class="previous">
+      <a href="{{ url_for('W') }}">
+	Back: W Events
+      </a>
+    </li>
+  </ul>
+  
 </div>
 {% endblock %}

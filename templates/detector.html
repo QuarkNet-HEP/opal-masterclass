@@ -109,11 +109,18 @@
   <img class="img-thumbnail" src="{{ url_for('static', filename='data/s7708_23918.gif') }}" >
 </p>
 
-<p>
-  <a href="{{ url_for('challenge1') }}">Next: Challenge (Part 1)</a>
-</p>
-<p>
-  <a href="{{ url_for('contents') }}">Back to start</a>
-</p>
+<ul class="pager">
+  <li class="next">
+    <a href="{{ url_for('challenge1') }}">
+      Next: Challenge 1
+    </a>
+  </li>
+  <li class="previous">
+    <a href="{{ url_for('intro') }}">
+      Back: Introduction
+    </a>
+  </li>
+</ul>
+
 </div>
 {% endblock %}

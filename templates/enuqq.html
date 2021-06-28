@@ -5,12 +5,21 @@
 
 {% block content %}
 <div class="container">
-<h1>{{ header }}</h1>
+  <h1>{{ header }}</h1>
 
-<img class="img-thumbnail" src="{{ url_for('static', filename='data/x7590_9003.gif') }}"> 
-<img class="img-thumbnail" src="{{ url_for('static', filename='data/s7590_9003.gif') }}">
-
-<img class="img-thumbnail" src="{{ url_for('static', filename='data/m7590_9003.gif') }}">
+  <p>
+    <img class="img-thumbnail" src="{{ url_for('static', filename='data/x7590_9003.gif') }}"> 
+    <img class="img-thumbnail" src="{{ url_for('static', filename='data/s7590_9003.gif') }}">
+    <img class="img-thumbnail" src="{{ url_for('static', filename='data/m7590_9003.gif') }}">
+  </p>
+  
+  <p>
+    <a href="{{ url_for('W') }}">
+      <button type="button" class="btn btn-outline-primary">
+	Back to W Events
+      </button>
+    </a>
+  </p>
 
 </div>
 {% endblock %}

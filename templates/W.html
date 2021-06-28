@@ -99,11 +99,18 @@
     </a>
   </p>
 
-  <p>
-    <a href="{{ url_for('challenge3') }}">Next</a>
-  </p>
-  <p>
-    <a href="{{ url_for('contents') }}">Back to start</a>
-  </p>
+  <ul class="pager">
+    <li class="next">
+      <a href="{{ url_for('challenge3') }}">
+	Next: Challenge 3
+      </a>
+    </li>
+    <li class="previous">
+      <a href="{{ url_for('challenge2') }}">
+	Back: Challenge 2
+      </a>
+    </li>
+  </ul>
+  
 </div>
 {% endblock %}

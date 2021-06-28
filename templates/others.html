@@ -5,51 +5,48 @@
 
 {% block content %}
 <div class="container">
-<h1>{{ title }}</h1>
+  <h1>{{ title }}</h1>
 
-<p>
-  If you have enjoyed the challenges so far then you may be interested in
-  learning about some more types of event.
-  These events are rather like
-  <a href="{{url_for('Z') }}"> the events containing a 
-    particle-antiparticle pair </a> that we looked at in an earlier section,
-  but made slightly more complicated, because extra particles have been added.
-</p>
-<p>
-  One reason why this is interesting is that these extra particles sometimes 
-  make it much more difficult to distinguish 
-  <a href="{{ url_for('Z') }}"> the events containing a 
-    particle-antiparticle pair </a> 
-  from <a href="{{ url_for('W') }}"> events containing a pair of 
-    W particles</a>.
-</p>
+  <p>
+    If you have enjoyed the challenges so far then you may be interested in
+    learning about some more types of event.
+    These events are rather like
+    <a href="{{url_for('Z') }}"> the events containing a 
+      particle-antiparticle pair </a> that we looked at in an earlier section,
+    but made slightly more complicated, because extra particles have been added.
+  </p>
+  <p>
+    One reason why this is interesting is that these extra particles sometimes 
+    make it much more difficult to distinguish 
+    <a href="{{ url_for('Z') }}"> the events containing a 
+      particle-antiparticle pair </a> 
+    from <a href="{{ url_for('W') }}"> events containing a pair of 
+      W particles</a>.
+  </p>
 
-<p>
-  Take a look at the following new types of events:
-  <ul>
-    <li><a href="{{ url_for('ffgamma') }}">High Energy Photons in Events Containing a
-	Particle-Antiparticle Pair </a>
-    <li><a href="{{ url_for('qqg') }}">High Energy Gluons in Events Containing a
-	Quark-Antiquark Pair </a>
-    <li><a href="{{ url_for('ffff') }}">"Four Fermion" Events</a>
+  <p>
+    Take a look at the following new types of events:
+    <ul>
+      <li><a href="{{ url_for('ffgamma') }}">High Energy Photons in Events Containing a
+	  Particle-Antiparticle Pair </a>
+      <li><a href="{{ url_for('qqg') }}">High Energy Gluons in Events Containing a
+	  Quark-Antiquark Pair </a>
+      <li><a href="{{ url_for('ffff') }}">"Four Fermion" Events</a>
+    </ul>
+  </p>
+
+  <ul class="pager">
+    <li class="next">
+      <a href="{{ url_for('challenge5') }}">
+	Next: Challenge 5
+      </a>
+    </li>
+    <li class="previous">
+      <a href="{{ url_for('challenge4') }}">
+	Back: Challenge 4
+      </a>
+    </li>
   </ul>
-</p>
-
-<p>
-  Once you've understood the way we identify the different
-  types of new events, then please
-  <a href="{{ url_for('challenge5') }}">
-    proceed to the next part 
-    of the programme,
-  </a> which is 
-  "Challenge Part 5".
-</p>
-
-<p>
-  <a href="{{ url_for('challenge5') }}">Next</a>
-</p>
-<p>
-  <a href="{{ url_for('contents') }}">Back to start</a>
-</p>
+  
 </div>
 {% endblock %}
