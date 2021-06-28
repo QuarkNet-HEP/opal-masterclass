@@ -8,26 +8,28 @@
   <h1>{{ title }}</h1>
   <p>
     This masterclass is based on the
-    <a href="http://www.hep.man.ac.uk/u/events/">
+    <a href="http://www.hep.man.ac.uk/u/events/" target="_blank">
       original OPAL Masterclass
     </a> 
     developed
     by Terry Wyatt. Original contributors include Pezouna Pieri, Akram Khan,
     David Ward, Nigel Watson, and Andrew McNab. More information can be found
-    <a href="http://www.hep.man.ac.uk/u/events/acknowledgements.html">here</a>.
+    <a href="http://www.hep.man.ac.uk/u/events/acknowledgements.html" target="_blank">here</a>.
   </p>
   <p>
-    This version is being developed by Tom McCauley. The source code, data, and
+    This version is being developed by <a href="https://github.com/tpmccauley" target="_blank">Tom McCauley</a>. The source code, data, and
     outstanding issues are on
-    <a href="https://github.com/QuarkNet-HEP/opal-masterclass">
+    <a href="https://github.com/QuarkNet-HEP/opal-masterclass" target="_blank">
       GitHub</a>.
   </p>
-  
-  <p>
-    <a href="{{url_for('contents') }}">
-      Back
-    </a>
-  </p>
+     
+  <ul class="pager">
+    <li class="previous">
+      <a href="{{url_for('contents') }}">
+	Back to Contents
+      </a>
+    </li>
+  </ul>
 
 </div>
 {% endblock %}
