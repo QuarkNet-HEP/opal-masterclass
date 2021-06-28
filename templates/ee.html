@@ -5,82 +5,71 @@
 
 {% block content %}
 <div class="container">
-<h1>{{ header }}</h1>
+  <h1>{{ header }}</h1>
   
-<p>
-  Events in which an electron-positron pair are produced are fairly easy to 
-  identify.
-  We see a back-to-back pair of high momentum tracks pointing at high energy
-  clusters of energy in the electromagnetic calorimeter.
-</p>
+  <p>
+    Events in which an electron-positron pair are produced are fairly easy to 
+    identify.
+    We see a back-to-back pair of high momentum tracks pointing at high energy
+    clusters of energy in the electromagnetic calorimeter.
+  </p>
 
-<p>
-  Here are a couple of example events.
-</p>
+  <p>
+    Here are a couple of example events.
+  </p>
 
-<p>
-  Example Event Number 1
-</p>
+  <p>
+    Example Event Number 1
+  </p>
 
-<p>
-  End-On View of Event
-</p>
+  <p>
+    End-On View of Event
+  </p>
 
-<p>
-  <img class="img-thumbnail" src="{{ url_for('static', filename='data/x7575_13812.gif') }}">
-</p>
+  <p>
+    <img class="img-thumbnail" src="{{ url_for('static', filename='data/x7575_13812.gif') }}">
+  </p>
 
-<p>
-  Side View of Event
-</p>
+  <p>
+    Side View of Event
+  </p>
 
-<p>
-  <img class="img-thumbnail" src="{{ url_for('static', filename='data/s7575_13812.gif') }}">
-</p>
+  <p>
+    <img class="img-thumbnail" src="{{ url_for('static', filename='data/s7575_13812.gif') }}">
+  </p>
 
-<p>
-  Example Event Number 2
-</p>
+  <p>
+    Example Event Number 2
+  </p>
 
-<p>
-  In the second example event the electrons strike the end-cap region 
-  of the detector.
-</p>
+  <p>
+    In the second example event the electrons strike the end-cap region 
+    of the detector.
+  </p>
 
-<p>
-  End-On View of Event
-</p>
+  <p>
+    End-On View of Event
+  </p>
 
-<p>
-  <img class="img-thumbnail" src="{{ url_for('static', filename='data/x7575_9323.gif') }}">
-</p>
+  <p>
+    <img class="img-thumbnail" src="{{ url_for('static', filename='data/x7575_9323.gif') }}">
+  </p>
 
-<p>
-  Side View of Event
-</p>
+  <p>
+    Side View of Event
+  </p>
 
-<p>
-  <img class="img-thumbnail" src="{{ url_for('static', filename='data/s7575_9323.gif') }}">
-</p>
-  
-<p>
-  Next take a look at some
-  <a href="{{ url_for('tautau') }}">
-    example \(e^{+}e^{-} \rightarrow \tau^{+}\tau^{-}\) events.
-  </a>
-</p>
+  <p>
+    <img class="img-thumbnail" src="{{ url_for('static', filename='data/s7575_9323.gif') }}">
+  </p>
+   
+  <ul class="pager">
+    <li class="previous">
+      <a href="{{url_for('Z') }}">
+	Back to Z Events
+      </a>
+    </li>
+  </ul>
 
-<p>
-  <a href="{{ url_for('Z') }}">
-    Back to general section on "How to Identify Events Containing 
-    a Particle-Antiparticle Pair".
-  </a>
-</p>
-
-<p>
-  <a href="{{url_for('contents') }} ">
-    Back to Home Page with table of contents.
-  </a>
-</p>
 </div>  
 {% endblock %}
