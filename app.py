@@ -13,32 +13,13 @@ from flask_bootstrap import (
 app = Flask(__name__)
 bootstrap = Bootstrap(app)
 
-zevents = []
-wevents = []
+zevents = json.load(
+    app.open_resource('data/Z-challenge.json')
+)
 
-with app.open_resource('data/Z-challenge.csv', mode='rt') as zcsv:
-    csv_reader = csv.reader(zcsv)
-    next(csv_reader, None)
-    
-    for fn, eid in csv_reader:
-        zevents.append(
-            {
-                'file_name': fn,
-                'event_id': eid
-            }
-        )
-
-with app.open_resource('data/W-challenge.csv', mode='rt') as wcsv:
-    csv_reader = csv.reader(wcsv)
-    next(csv_reader, None)
-    
-    for fn, eid in csv_reader:
-        wevents.append(
-            {
-                'file_name': fn,
-                'event_id': eid
-            }
-        )
+wevents = json.load(
+    app.open_resource('data/W-challenge.json')
+)
 
 challenge1_events = json.load(
     app.open_resource('data/challenge1.json')

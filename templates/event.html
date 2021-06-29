@@ -7,10 +7,12 @@
 <div class="container">
   <div class="text-center">
     <h2>{{ title }}</h2>
-
-    <p>
-	<img class="img-thumbnail" src="{{ url_for('static', filename='data/'+event.file_name) }}" title="{{ event.event_id }}">
-    </p>
+    
+    {% for fn in event.file_name: %}
+      <img class="img-thumbnail"
+	   src="{{ url_for('static', filename='data/'+fn) }}"
+	   title="{{ event.event_id }}">
+    {% endfor %}
 
     <p>
     <ul class="pager">
