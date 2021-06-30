@@ -94,7 +94,11 @@ def ch1(id):
         nevents=len(challenge1_events)+1,
         back_id=int(id)-1,
         next_id=int(id)+1,
-        options=['electron', 'muon', 'hadron'],
+        options={
+            'electron':'electron',
+            'muon':'muon',
+            'hadron':'hadron'
+            },
         event=list(filter(lambda e: e["id"] == int(id), challenge1_events))[0]
     )
 
@@ -116,7 +120,12 @@ def ch2(id):
         nevents=len(challenge2_events)+1,
         back_id=int(id)-1,
         next_id=int(id)+1,
-        options=['ee', 'mumu', 'tautau', 'qq'],
+        options={
+            'ee':'\(e^{+}e^{-}\)',
+            'mumu':'\(\mu^{+}\mu^{-}\)',
+            'tautau':'\(\\tau^{+}\\tau^{-}\)',
+            'qq':'\(q\\bar{q}\)'
+        },
         event=list(filter(lambda e: e["id"] == int(id), challenge2_events))[0]
     )
 
@@ -138,7 +147,13 @@ def ch3(id):
         nevents=len(challenge3_events)+1,
         back_id=int(id)-1,
         next_id=int(id)+1,
-        options=['enuqq', 'munuqq', 'taunuqq', 'qqqq', 'lnulnu'],
+        options={
+            'enuqq':'\(e\\bar{\\nu} q\\bar{q} \)',
+            'munuqq':'\(\mu\\bar{\\nu} q\\bar{q} \)',
+            'taunuqq':'\(\\tau\\bar{\\nu} q\\bar{q} \)',
+            'qqqq':'\(q\\bar{q}q\\bar{q}\)',
+            'lnulnu':'\(l^{+}\\nu l^{-}\\bar{\\nu}\)'
+        },
         event=list(filter(lambda e: e["id"] == int(id), challenge3_events))[0]
     )
 
@@ -160,10 +175,17 @@ def ch4(id):
         nevents=len(challenge4_events)+1,
         back_id=int(id)-1,
         next_id=int(id)+1,
-        options=[
-            'ee', 'mumu', 'tautau', 'qq',
-            'enuqq', 'munuqq', 'taunuqq', 'qqqq', 'lnulnu'
-        ],
+        options={
+            'ee':'\(e^{+}e^{-}\)',
+            'mumu':'\(\mu^{+}\mu^{-}\)',
+            'tautau':'\(\\tau^{+}\\tau^{-}\)',
+            'qq':'\(q\\bar{q}\)',
+            'enuqq':'\(e\\bar{\\nu} q\\bar{q} \)',
+            'munuqq':'\(\mu\\bar{\\nu} q\\bar{q} \)',
+            'taunuqq':'\(\\tau\\bar{\\nu} q\\bar{q} \)',
+            'qqqq':'\(q\\bar{q}q\\bar{q}\)',
+            'lnulnu':'\(l^{+}\\nu l^{-}\\bar{\\nu}\)'
+        },
         event=list(filter(lambda e: e["id"] == int(id), challenge4_events))[0]
     )
 
@@ -185,11 +207,20 @@ def ch5(id):
         nevents=len(challenge5_events)+1,
         back_id=int(id)-1,
         next_id=int(id)+1,
-        options=[
-            'ee', 'mumu', 'tautau', 'qq',
-            'enuqq', 'munuqq', 'taunuqq', 'qqqq', 'lnulnu',
-            'ffgamma', 'qqg', 'ffff'
-        ],
+        options={
+            'ee':'\(e^{+}e^{-}\)',
+            'mumu':'\(\mu^{+}\mu^{-}\)',
+            'tautau':'\(\\tau^{+}\\tau^{-}\)',
+            'qq':'\(q\\bar{q}\)',
+            'enuqq':'\(e\\bar{\\nu} q\\bar{q} \)',
+            'munuqq':'\(\mu\\bar{\\nu} q\\bar{q} \)',
+            'taunuqq':'\(\\tau\\bar{\\nu} q\\bar{q} \)',
+            'qqqq':'\(q\\bar{q}q\\bar{q}\)',
+            'lnulnu':'\(l^{+}\\nu l^{-}\\bar{\\nu}\)',
+            'llgamma':'\(l^{+}l^{-}\gamma\)',
+            'qqgamma':'\(q\\bar{q}\gamma\)',
+            'ffff':'\(l^{+}l^{-}l^{+}l^{-}\)'
+        },
         event=list(filter(lambda e: e["id"] == int(id), challenge5_events))[0]
     )
 
@@ -235,7 +266,7 @@ def zevent(id):
     return render_template(
         'event.html',
         title=f'Z Measurement: Event {id}',
-        nevents=1000, # There are duplicates in Z dataset. Investigate.
+        nevents=len(zevents),
         dataset='zevent',
         measurement='Zdecays',
         back_id=int(id)-1,
@@ -248,7 +279,7 @@ def wevent(id):
     return render_template(
         'event.html',
         title=f'W Measurement: Event {id}',
-        nevents=479, # There are duplicates in the W dataset (end and side views).
+        nevents=len(wevents),
         dataset='wevent',
         measurement='Wdecays',
         back_id=int(id)-1,
